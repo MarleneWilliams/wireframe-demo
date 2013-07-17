@@ -1,0 +1,18 @@
+sub-site
+  body font size
+  transition on menu hover
+  d/c underline on section title hover
+  carousel caption
+  promofooter
+    block contents
+    bkg color
+  sidbar styles
+
+  
+HOME
+  sub nav to buttons a-la subsite
+
+
+
+
+

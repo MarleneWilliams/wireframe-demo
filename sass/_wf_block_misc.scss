@@ -1,0 +1,239 @@
+
+/* + + +   BRANDING   + + + */
+/*
+.panel.branding {
+  @include fill-panel;
+}
+.branding {
+  a {
+    background-image: url("http://thedrupalteam.com/unc-wireframing/images/scsmall.jpg");
+    background-color: white;
+    background-size: 100% auto;
+    width: 100%;
+    height: 77px;
+    display: inline-block;
+    background-position: 0px -20px;
+    background-repeat: no-repeat;
+    &:hover {
+      background-image: url("http://thedrupalteam.com/unc-wireframing/images/scsmallover.jpg");
+    }
+  }
+}
+*/
+
+
+/* + + +  EVENTS  + + + */
+
+.events-list {
+  span {
+    display: block;
+    position: relative;
+    left: -2px;
+  }
+  .date-month {
+    font-size: emPCalc(12);
+    color: white;
+    top: -2px;
+  }
+  .date-day {
+    font-size: emPCalc(14);
+  }
+  .event-details {
+    display: block;
+    font-size: emPCalc(11);
+    line-height: 18px;
+    img {
+      float: right;
+    }
+  }
+  li {
+    margin-bottom: 10px;
+  }
+}
+
+.calendar-graphic {
+  display: block;
+  background-image: url("http://thedrupalteam.com/unc-wireframing/images/calendar.png");
+  background-repeat: no-repeat;
+  width: 44px;
+  height: 46px;
+  text-align: center;
+}
+
+
+/* + + +   FOOTER   + + + */
+.page-footer {
+  padding-top: 15px;
+  background-color: #ddd;
+}
+
+
+
+/* + + +   SEARCH BAR   + + + */
+.search-bar { 
+  background-color: white;
+  border: 1px solid #ccc;
+  margin-top: 3px;
+  form {
+  }
+  input {
+    width: 206px;
+    float: left;
+    display: inline-block;
+    height: 22px;
+    box-sizing: content-box;
+    line-height: 16px;
+    border: none;
+    margin: 0;
+    padding: 0.25em;
+  }
+  a.button {
+    width: auto;
+    float: left;
+    height: auto;
+    box-sizing: content-box;
+    padding: 0;
+    line-height: 16px;
+    margin: 2px 3px 0 0;
+    img {
+      @extend .dark-link;
+    }
+  }
+}
+// -- < Tablet
+@media #{$tiny} {
+  .search-bar {
+    float: left !important;
+    input {
+    }
+  }
+}
+
+/* + + +   SOCIAL MEDIA   + + + */
+.social-media-buttons {
+  clear: right;
+  margin-top: emCalc(6px);
+  margin-bottom: 0;
+  img {
+    width: 32px;
+    height: 32px;
+    @extend .dark-link;
+  }
+  li {
+    margin-left: emCalc(6px);
+  }
+}
+// -- < Tablet
+@media #{$tiny} {
+//  .social-media-buttons {
+//    float: left !important;
+//    margin-left: 0;
+//  }
+}
+
+
+
+/* + + +   SIDEBAR CTA BUTTONS   + + + */
+.cta-buttons {
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  padding: 0;
+  .button {
+    display: inline-block;
+    width: 115px;
+    padding: 12px 20px;
+  }
+}
+// Desktop styles   
+@media #{$small} {
+  .cta-buttons {
+    width: 100%;
+    margin-top: 10px;
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    float: left !important;
+    margin-left: 0;
+    .button {
+      display: block;
+      width: 100%;
+    }
+    .button:first-child {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+/* + + +   SERIOUSLY CREATIVE   + + + */
+.seriously-creative {
+//   background-image: url("http://placehold.it/960x300&text=Seriously+Creative");
+//   background-size: 100% auto; 
+//   background-position: 0 -110px;
+  margin-top: 3px;
+  margin-bottom: 15px;
+  background-color: #ccc;
+  overflow: hidden;
+  img {
+    @extend .dark-link;
+  }
+  .seriously-creative-inner {
+    width: 70%;
+    height: 70%;
+    img {
+      width: 100%;
+      height: auto; 
+    }
+  }
+  .seriously-creative-wflegend {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .panel {
+    background-color: transparent;
+    height: 150px;
+    margin-bottom: 0;
+    // &:hover {
+    //   background-color: rgba(0,0,0,.5);
+    // }
+  }
+  .cta {
+    margin: 0;
+    position: absolute;
+    bottom: 10%;
+    right: 20%;
+    width: 20%;
+    min-width: 124px;
+    padding-top: 1.25%;
+    padding-bottom: 1.25%;
+  }
+}
+
+
+/* + + +   MOBILE NAV   + + + */
+.mobile-sub-nav {
+  background-color: #ddd;
+  ul.side-nav {
+    text-align: center;
+    li {
+      a {
+        color: red;
+        @include button($padding:emCalc(7px));
+        margin: 0;
+      }
+      padding: 5px 5px 0 5px;
+      margin: 0;
+      &:hover {
+        background-color: #ddd;
+      }
+    }
+  }
+}
+.row.mobile-sub-nav {
+  .columns {
+    padding: 0;
+  }
+}
+  
+

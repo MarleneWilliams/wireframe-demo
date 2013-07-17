@@ -1,0 +1,55 @@
+/* + + +   LAYOUT   + + + */
+
+// Force foundation rows to fill width, otherwise re-scale when font-size is changed
+// See: https://github.com/zurb/foundation/issues/2529 */
+.row {
+  max-width: 960px;
+}
+
+.row {
+  background-color: white;
+}
+
+// On tablet+ screen, fill body width (for home page)
+@media #{$not-tiny} { 
+  .row {
+    &.fill-left {
+      .columns {
+        &:first-child {
+          padding-left:0;
+        }
+      }
+    }
+    &.fill-right {
+      .columns {
+        &:last-child {
+          padding-right:0;
+        }
+      }
+      & row:not(.fill-right) {
+        .columns {
+          &:last-child {
+            padding-right: $column_gutter/2;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Remove top padding from element 
+.fill-top {
+  padding-top: 0;
+}
+
+@media #{$tiny} {
+  .columns {
+    padding-left: emCalc(4px);
+    padding-right: emCalc(4px);
+  }
+  .row .row {
+    width: auto;
+    margin-left: emCalc(-4px);
+    margin-right: emCalc(-4px);;
+  }
+}

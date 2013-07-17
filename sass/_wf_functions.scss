@@ -1,0 +1,16 @@
+@import "compass/css3/filter";
+@import "compass/css3/transition";
+
+
+/* + + +   Mixins/functions   + + + */
+
+@mixin fill-panel {
+  padding: 0;
+  border: none;
+}
+
+// Specify, in pixels, custom text sizes relative to the base $paragraph-font-size.
+// @TODO: figure out how to use the $paragraph-font-size variable directly.
+@function emPCalc($pxWidth) {
+  @return 11px * $pxWidth / 11;
+}
