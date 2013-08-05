@@ -153,7 +153,7 @@ class Wireframing {
 
 $wireframing = new Wireframing();
 $wireframing->css_files['stylesheets'] = 'app.css';
-$wireframing->url_install_dir = 'unc-wireframing/';
+$wireframing->url_install_dir = 'wireframing/';
 $wireframing->handle_request();
 
 
