@@ -1,0 +1,12 @@
+<?php
+namespace Wiredframe\Vendor\Legendair
+
+
+class WiredframePlugin implements Wiredframe\App\PluginInterface {
+  public function inject_js();
+  public function inject_css();
+  public function init();
+  public function get_tokens();
+
+
+}

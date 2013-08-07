@@ -1,0 +1,78 @@
+.meta-overlay-toggle {
+  position: absolute;
+  z-index: 2200;
+  background-color: red;
+  padding: 2px;
+  color: white;
+  font-size: 8px;
+  border: 1px solid black;
+  display: none;
+  box-shadow: 1px 1px 4px #333;
+  position: fixed;
+  top: 2px;
+  left: 2px;
+}
+.meta-overlay {
+  display: none;
+    display: none;
+    position: absolute;
+    background-color: rgba(255,0,0,.5);
+    top: 4px;
+    left: 4px;
+    padding: 2px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    width: 2.5em;
+    height: 19px;
+    line-height: 16px;
+    text-align: center;
+    z-index: 1000;
+}
+.meta-overlay-hide {
+  display: none;
+}
+
+.meta-overlay-toggle.no-float {
+  position: relative;
+  float: left;
+  display: inline-block;
+  left: 0;
+  top: 0;
+}
+
+#navigation-utility .meta-overlay {
+  top: -4px;
+  left: 0;
+}
+@media only screen and (min-width:768px)  {
+  .meta-overlay-show {
+    display: inline-block;
+  }
+  .legend-overlay-notes.meta-overlay-show {
+    display: block;
+  }
+  .meta-overlay-toggle {
+    display: block;
+  }
+}
+
+.events-list .meta-overlay {
+  display: none;
+}
+
+.legend-overlay-notes {
+  padding-top: 10px;
+  display: none;
+  background-color:#faa;
+  dl {
+    padding-top: 10px;
+  }
+  dt, dd {
+    float: left;
+  }
+  dt {
+    width: 30px;
+    clear: left;
+  }
+}

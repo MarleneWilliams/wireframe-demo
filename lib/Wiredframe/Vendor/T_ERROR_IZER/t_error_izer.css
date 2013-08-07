@@ -1,0 +1,28 @@
+<style>
+  .debug-op {
+    white-space:pre;
+    border: 1px solid gray;
+    padding: 10px;
+    word-wrap:break-word;
+  }
+  .debug-op h3 {
+    margin: 0;
+    background-color: #ccc;
+    padding:5px;
+  }
+  .debug-op.error h3 {
+    background-color: #f55;
+  }
+  .debug-op-info {
+    font-weight:bold;
+    padding-left:10px;
+    margin-bottom: 10px;
+    color: gray;
+    font-size:0.8em;
+  }
+  .debug-op-trace,
+  .debug-op-data {
+    font-family: "courier", "courier new", monospace;
+    font-size: 0.8em;
+  }
+</style>
