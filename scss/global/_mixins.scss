@@ -1,0 +1,68 @@
+//
+// Media queries
+//
+
+@mixin respond-to($target) {
+  // For tablet on up
+  @if $target == tablet {
+    @media #{$small} {
+      @content;
+    }
+    // For IE versions less-than-9, so they can get the media query styles
+    .lt-ie9 &{
+      @content;
+    }
+  }
+  // For desktop on up
+  @if $target == desktop {
+    @media #{$medium} {
+      @content;
+    }
+    // For IE versions less-than-9, so they can get the media query styles
+    // Giving it more specificity than tablets
+    html.lt-ie9 &{
+      @content;
+    }
+  }
+  // For widescreen
+  @if $target == widescreen {
+    @media #{$large} {
+      @content;
+    }
+    // For IE versions less-than-9, so they can get the media query styles
+    // Giving it more specificity than tablets
+    html.lt-ie9 body &{
+      @content;
+    }
+  }
+  // For IE9 and down
+  @if $target == ie9 {
+    .lt-ie10 &{
+      @content;
+    }
+  }
+  // For IE8 and down
+  @if $target == ie8 {
+    .lt-ie9 &{
+      @content;
+    }
+  }
+  // For IE7 and down
+  @if $target == ie7 {
+    .lt-ie8 &{
+      @content;
+    }
+  }
+  // For print
+  @if $target == print {
+    // Allow us to generate a separate print stylesheet
+    $print-styles: false !default;
+    @if $print-styles {
+      @content;
+    }
+    // Also put styles in a print media query
+    @media #{$print-media} {
+      @content;
+    }
+  }
+}

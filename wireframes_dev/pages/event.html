@@ -2,23 +2,27 @@
 
   {{components/region-header/header}}
 
-  <div id="content" role="content">
-    <a id="main-content"></a>
+  <div id="main">
 
-    {{components/shared/breadcrumb}}
+    <div id="content" role="content">
+      <a id="main-content"></a>
 
-    {{components/ct-event/title}}
-    {{components/ct-event/node}}
-    
-  </div><!-- /#content -->
+      {{components/shared/breadcrumb}}
 
-  <aside class="sidebars">
-    <section class="region region-sidebar-first sidebar">
+      {{components/ct-event/title}}
+      {{components/ct-event/node}}
+      
+    </div><!-- /#content -->
 
-      {{components/shared/section-menu}}
+    <aside class="sidebars">
+      <section class="region region-sidebar-first sidebar">
 
-    </section><!-- /.region-sidebar-first -->
-  </aside><!-- /.sidebars -->
+        {{components/shared/section-menu}}
+
+      </section><!-- /.region-sidebar-first -->
+    </aside><!-- /.sidebars -->
+
+  </div><!-- /#main -->
 
   {{components/region-footer/footer}}
 

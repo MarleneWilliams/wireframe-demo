@@ -1,0 +1,31 @@
+//
+// Layout
+//
+
+// Grid variables
+
+// $row-width: emCalc(1000);
+// $column-gutter: emCalc(30);
+$total-columns: 12;
+
+// Column variables - use these to set your region widths
+$full-width:           $total-columns;
+$sidebar-1-width:      3;
+
+$content-width:        $full-width - $sidebar-1-width;
+
+
+// Media Queries
+
+// $small-screen: 768px;
+// $medium-screen: 1280px;
+// $large-screen: 1440px;
+
+// $screen: "only screen";
+// $small: "only screen and (min-width: #{$small-screen})";
+// $medium: "only screen and (min-width: #{$medium-screen})";
+// $large: "only screen and (min-width: #{$large-screen})";
+// $landscape: "only screen and (orientation: landscape)";
+// $portrait: "only screen and (orientation: portrait)";
+
+$print-media: "print";

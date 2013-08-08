@@ -4421,4 +4421,130 @@ table tfoot tr td {
   right: 0;
 }
 
-/* No files to import found in layout/**\/* */
+/* line 18, ../scss/components/shared/_placeholder.scss */
+img.placeholder {
+  height: 200px;
+  width: 200px;
+}
+
+/* line 2, ../scss/layout/_content.scss */
+.layout-landing #content {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 100%;
+  float: left;
+}
+/* line 5, ../scss/layout/_content.scss */
+.layout-default #content {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 100%;
+  float: left;
+}
+@media only screen and (min-width: 768px) {
+  /* line 5, ../scss/layout/_content.scss */
+  .layout-default #content {
+    position: relative;
+    padding-left: 0.9375em;
+    padding-right: 0.9375em;
+    width: 75%;
+    float: left;
+  }
+}
+/* line 12, ../scss/global/_mixins.scss */
+.lt-ie9 .layout-default #content {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 75%;
+  float: left;
+}
+
+/* line 1, ../scss/layout/_footer.scss */
+#footer {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 62.5em;
+  *zoom: 1;
+}
+/* line 121, ../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
+#footer:before, #footer:after {
+  content: " ";
+  display: table;
+}
+/* line 122, ../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
+#footer:after {
+  clear: both;
+}
+
+/* line 1, ../scss/layout/_header.scss */
+#header {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 62.5em;
+  *zoom: 1;
+}
+/* line 121, ../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
+#header:before, #header:after {
+  content: " ";
+  display: table;
+}
+/* line 122, ../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
+#header:after {
+  clear: both;
+}
+
+/* line 1, ../scss/layout/_main.scss */
+#main {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 62.5em;
+  *zoom: 1;
+}
+/* line 121, ../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
+#main:before, #main:after {
+  content: " ";
+  display: table;
+}
+/* line 122, ../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
+#main:after {
+  clear: both;
+}
+
+/* line 1, ../scss/layout/_sidebar.scss */
+.sidebar {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 100%;
+  float: left;
+}
+@media only screen and (min-width: 768px) {
+  /* line 1, ../scss/layout/_sidebar.scss */
+  .sidebar {
+    position: relative;
+    padding-left: 0.9375em;
+    padding-right: 0.9375em;
+    width: 25%;
+    float: left;
+  }
+}
+/* line 12, ../scss/global/_mixins.scss */
+.lt-ie9 .sidebar {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 25%;
+  float: left;
+}

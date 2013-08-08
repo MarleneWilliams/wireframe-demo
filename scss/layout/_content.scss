@@ -1,0 +1,11 @@
+#content {
+  .layout-landing & {
+    @include grid-column($full-width);
+  }
+  .layout-default & {
+    @include grid-column($full-width);
+    @include respond-to(tablet) {
+      @include grid-column($content-width);
+    }
+  }
+}
