@@ -16,6 +16,7 @@
  *  item.notes:  Explanatory notes.  If desired, wrap a title for the note in
  *     a span with class="name".
  */
+/*
 elms: [
   {sel:'#masthead',idx:1,
     notes:'<span class="name">Masthead Region</span>'
@@ -32,4 +33,4 @@ elms: [
   {sel:'.page-footer', idx:5,
     notes:'Page Footer'
   }
-]
+]*/
