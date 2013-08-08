@@ -10,17 +10,17 @@ $wiredframe_config = array(
     'root' => 'wireframes_dev',
     'pages' => 'pages', # ie., source/pages
     'components' => 'components', # ie., source/components
-    'blocks' => 'blocks', # ie., source/blocks
+    // 'blocks' => 'blocks', # ie., source/blocks
   ),
   'static_files_path' => 'wireframes_static',
-  'sass_path' => 'sass',
-  'scripts_path' => 'javascripts',
+  'sass_path' => 'scss',
+  'scripts_path' => 'js',
   'css' => array(
-    'path' => 'stylesheets',
+    'path' => 'css',
     'files' => array(
       // filename
       // @TODO: consider allowing per-file path
-      'app.css',
+      'style.css',
     ),
   ),
   'basedir' => __DIR__,
@@ -35,8 +35,8 @@ $wiredframe_config = array(
       'plugin' => 'Wiredframe\Vendor\Legendair\WiredframePlugin',
       'lib' => 'Legendair',
       'config_dir' => 'legend', #rel to 'source_paths.root'
-      'css_path' => 'stylesheets/vendor/legendair.css',
-      'js_path' => 'javascripts/vendor/jquery.wf-legend.js',
+      'css_path' => 'css/vendor/legendair.css',
+      'js_path' => 'js/vendor/jquery.wf-legend.js',
       'ui_config' => 
         'ui: {
            button_insert_selector: \'.wf-admin-menu\',
