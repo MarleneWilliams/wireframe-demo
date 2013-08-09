@@ -4,17 +4,23 @@
     {{wfctrl::jsrefs::/foundation/foundation.orbit.js}}
     {{wfctrl::jsrefs::/foundation/foundation.topbar.js}}
 
-  {{wfctrl::jsrefs::/vendor/jquery.wiredframe.js}}
+  <!-- {{wfctrl::jsrefs::/vendor/jquery.infieldlabel.js}} -->
 
+  {{wfctrl::jsrefs::/custom/scripts.js}}
+
+  {{wfctrl::jsrefs::/vendor/jquery.wiredframe.js}}
 
 <!-- init wiredframe script -->
 {{wfctrl::js_bottom}}
 
-
 <!-- Load legend overlay plugin -->
 {{legendair::js::{"key":"$$q$$"} }}
 
-
+<script>
+  $(document).ready(function(){
+    $("label").inFieldLabels();
+  });
+</script>
 
 </body>
 </html>

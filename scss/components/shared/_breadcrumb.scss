@@ -1,0 +1,10 @@
+.breadcrumb {
+  @include crumb-container;
+  ol {
+    list-style-image: none;
+    list-style: none;
+  }
+  li {
+    @include crumbs;
+  }
+}

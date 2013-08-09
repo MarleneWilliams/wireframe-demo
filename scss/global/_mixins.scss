@@ -66,3 +66,22 @@
     }
   }
 }
+
+// Padded box
+@mixin padded-box($color) {
+  background-color: $color;
+  border-bottom: 1px solid darken($color, 10%);
+  margin-bottom: 1em;
+  padding: .75em;
+}
+@mixin padded-box-remove {
+  background-color: transparent;
+  border-bottom: 0 none;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+// Inline list
+// @mixin inline-list {
+//   @extend .inline-list;
+// }

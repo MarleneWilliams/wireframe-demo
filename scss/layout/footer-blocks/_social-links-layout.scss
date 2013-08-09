@@ -1,0 +1,13 @@
+#block-menu-menu-social-links {
+  @include grid-column($full-width);
+  .menu {
+    @extend %inline-list-center;
+      // @extend .inline-list;
+  }
+  @include respond-to(tablet) {
+    @include grid-column(4);
+    .menu {
+      @include inline-list;
+    }
+  }
+}

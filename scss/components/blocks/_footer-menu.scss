@@ -1,0 +1,20 @@
+#block-menu-menu-footer-menu {
+  @extend %block-title-hide;
+  ul {
+    @extend .no-bullet;
+    > li {
+      @include padded-box($gray-lighter);
+      li {
+        @include padded-box-remove;
+        font-size: $small-font-size;
+      }
+    }
+  }
+  @include respond-to(tablet) {
+    ul {
+      > li {
+        @include padded-box-remove;
+      }
+    }
+  }
+}

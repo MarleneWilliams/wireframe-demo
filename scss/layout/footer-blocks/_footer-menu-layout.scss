@@ -1,0 +1,27 @@
+#block-menu-menu-footer-menu {
+  @include grid-column($full-width);
+  @include respond-to(tablet) {
+    ul {
+      @include block-grid(2);
+      ul {
+        @include block-grid(1);
+        margin: 0;
+        li {
+          padding: 0;
+        }
+      }
+    }
+  }
+  @include respond-to(desktop) {
+    ul {
+      @include block-grid(4);
+      ul {
+        @include block-grid(1);
+        margin: 0;
+        li {
+          padding: 0;
+        }
+      }
+    }
+  }
+}

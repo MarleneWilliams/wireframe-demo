@@ -1,0 +1,6 @@
+.block-search {
+  @extend %block-title-hide;
+  label {
+    display: none;
+  }
+}

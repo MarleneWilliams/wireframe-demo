@@ -1,0 +1,17 @@
+.block-search {
+  @extend %block-layout-fix;
+  .form-type-textfield {
+    @include grid-column(8);
+  }
+  .form-actions {
+    @include grid-column(4);
+  }
+}
+
+// Layout for when the block is in the header
+#header .block-search {
+  @include respond-to(tablet) {
+    @include grid-column(4);
+    clear: none;
+  }
+}

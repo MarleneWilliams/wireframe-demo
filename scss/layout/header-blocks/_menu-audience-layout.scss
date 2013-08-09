@@ -1,0 +1,12 @@
+#block-menu-menu-audience-menu {
+  @include grid-column($full-width);
+  .menu {
+    @extend %inline-list-center;
+  }
+  @include respond-to(tablet) {
+    .menu {
+      @include inline-list;
+      float: right;
+    }
+  }
+}

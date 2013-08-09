@@ -1,0 +1,8 @@
+.top-bar {
+
+  @include grid-column($full-width, false, false, false, false, false, true);
+  @include respond-to(tablet) {
+    // @include grid-column($full-width, false, false, false, false, false, false);
+    // margin: 0 $column-gutter-half;
+  }
+}

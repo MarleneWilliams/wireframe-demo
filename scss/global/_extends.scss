@@ -1,0 +1,24 @@
+// Hide block titles
+%block-title-hide {
+  .block-title {
+    display: none;
+  }
+}
+
+// Block layout fixes
+%block-layout-fix {
+  clear: both;
+  margin-bottom: 1em;
+}
+
+// Inline list center
+%inline-list-center {
+  margin: 0;
+  text-align: center;
+  li {
+    display: inline;
+    a {
+      padding: .25em .5em;
+    }
+  }
+}
