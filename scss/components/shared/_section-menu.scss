@@ -1,0 +1,9 @@
+.section-menu {
+  ul {
+    @extend .side-nav;
+    @extend %sidebar-menu;
+    li {
+      margin-bottom: 0;
+    }
+  }
+}

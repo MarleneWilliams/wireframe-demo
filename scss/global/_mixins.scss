@@ -81,7 +81,10 @@
   padding: 0;
 }
 
-// Inline list
-// @mixin inline-list {
-//   @extend .inline-list;
-// }
+// Placeholder
+@mixin placeholder($height, $width, $bgc: $gray) {
+  background-color: $gray;
+  height: $height;
+  margin-bottom: 1em;
+  width: $width;
+}

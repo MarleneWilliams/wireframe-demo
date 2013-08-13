@@ -1,0 +1,9 @@
+.block-title {
+  @extend .subheader;
+  font-size: $h3-font-size;
+  line-height: 1;
+  margin: 0;
+}
+.block {
+  margin-bottom: .5em;
+}

@@ -1,0 +1,58 @@
+#block-view-upcoming-events {
+  .content {
+    padding: .5em 0;
+  }
+  .views-row {
+    clear: both;
+    margin-bottom: .5em;
+  }
+  .views-field-title {
+    font-size: 1em;
+    font-weight: bold;
+    h3 {
+      font-size: 1em;
+      a, a:link, a:visited {
+      }
+    }
+  }
+  .views-field-nothing {
+    display: block;
+    float: left;
+    max-width: 6em;
+    padding-bottom: 3em;
+    padding-top: .2em;
+    padding-left: 0;
+    width: 30%;
+    .event-calendar-date {
+      display: block;
+      font-weight: normal;
+      text-align: center;
+      a, a:link, a:visited, a:hover, a:active, a:focus {
+        border-bottom: 0 none;
+        font-weight: normal;
+      }
+      .event-month {
+        // color: $base-font-color;
+        font-size: 1.25em;
+        display: block;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+      .event-day {
+        // color: $blue;
+        display: block;
+        font-size: 2.25em;
+        line-height: 1em;
+        padding: 0 0 .25em 0;
+      }
+    }
+  }
+  .views-field-field-event-liblocation {
+    font-size: .9em;
+    font-style: italic;
+    padding: .5em 0;
+  }
+  .view-footer {
+    @extend %read-more;
+  }
+}

@@ -1,19 +1,26 @@
 #block-menu-menu-footer-menu {
   @extend %block-title-hide;
   ul {
-    @extend .no-bullet;
-    > li {
-      @include padded-box($gray-lighter);
+    @extend .side-nav;
+    // @extend .no-bullet;
+    @extend %sidebar-menu;
+    li {
+      // @include padded-box($gray-lighter);
+      margin-bottom: 0;
       li {
-        @include padded-box-remove;
-        font-size: $small-font-size;
+        // @include padded-box-remove;
+        // font-size: $small-font-size;
       }
     }
   }
   @include respond-to(tablet) {
     ul {
-      > li {
-        @include padded-box-remove;
+      li {
+        // @include padded-box-remove;
+        border-bottom: 0 none;
+        &.first {
+          border-top: 0 none;
+        }
       }
     }
   }

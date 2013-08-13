@@ -2,7 +2,7 @@
   @include grid-column($full-width);
   text-align: center;
   @include respond-to(tablet) {
-    @include grid-column(4);
+    @include grid-column(5);
     text-align: left;
   }
 }

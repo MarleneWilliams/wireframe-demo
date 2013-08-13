@@ -22,3 +22,51 @@
     }
   }
 }
+
+// Sidebar menu
+%sidebar-menu {  
+  li {
+    border-bottom: 1px solid $gray-light;
+    margin-bottom: 0;
+    &.first {
+      border-top: 1px solid $gray-light;
+    }
+    a {
+      background-color: $gray-lighter;
+      padding: .5em 1em;
+    }
+    li {
+      border-bottom: 0 none;
+      padding-bottom: .75em;
+      &.first {
+        border-top: 0 none;
+      }
+      a {
+        background-color: transparent;
+        padding: 0;
+      }
+    }
+    ul {
+      background-color: lighten($gray-lighter, 5%);
+      padding: 1em;
+      ul {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+// Floats
+%float-left {
+  float: left;
+  margin: 0 1em 1em 0;
+}
+%float-right {
+  float: right;
+  margin: 0 0 1em 1em;
+}
+
+// Read more
+%read-more {
+  text-align: right;
+}
