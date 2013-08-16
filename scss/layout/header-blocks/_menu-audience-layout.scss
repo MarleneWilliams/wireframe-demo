@@ -4,6 +4,9 @@
     @extend %inline-list-center;
   }
   @include respond-to(tablet) {
+    position: absolute;
+    right: 0;
+    top: 0;
     .menu {
       @include inline-list;
       float: right;

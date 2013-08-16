@@ -14,3 +14,11 @@ form {
     }
   }
 }
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  @extend .button;
+  font-size: .75em;
+}

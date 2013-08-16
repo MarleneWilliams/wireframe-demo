@@ -5,6 +5,12 @@
   }
 }
 
+// Hide other things
+.element-invisible,
+%hide {
+  display: none;
+}
+
 // Block layout fixes
 %block-layout-fix {
   clear: both;

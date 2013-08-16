@@ -86,5 +86,13 @@
   background-color: $gray;
   height: $height;
   margin-bottom: 1em;
+  max-width: 100%;
+  width: $width;
+}
+
+@mixin gridify($cols) {
+  $width: 100% / $cols;
+  display: block;
+  float: left;
   width: $width;
 }

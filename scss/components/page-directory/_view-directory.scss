@@ -1,0 +1,6 @@
+.view-people-by-type {
+    @include block-grid(2);
+  .views-row {
+    // @include gridify(2);
+  }
+}
