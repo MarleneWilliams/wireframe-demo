@@ -2,7 +2,30 @@
 // Media queries
 //
 
+@mixin grid-break($grid-number) {
+  $grid-break: $grid-width * $grid-number;
+  @media only screen and (min-width: #{$grid-break}) {
+    @content;
+  }
+  // For IE versions less-than-9, so they can get the media query styles
+  .lt-ie9 &{
+    @content;
+  }
+}
+
+// Respond-to
 @mixin respond-to($target) {
+  // Grid-based
+  // @if $target == grid-#{$grid-number} {
+  //   $grid-break: $grid-width * $grid-number;
+  //   @media only screen and (min-width: #{$grid-break}) {
+  //     @content;
+  //   }
+  //   // For IE versions less-than-9, so they can get the media query styles
+  //   .lt-ie9 &{
+  //     @content;
+  //   }
+  // }
   // For tablet on up
   @if $target == tablet {
     @media #{$small} {

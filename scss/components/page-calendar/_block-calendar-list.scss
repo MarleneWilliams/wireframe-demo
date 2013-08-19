@@ -1,0 +1,5 @@
+.block-calendar-list {
+  @include respond-to(tablet) {
+    display: none;
+  }
+}

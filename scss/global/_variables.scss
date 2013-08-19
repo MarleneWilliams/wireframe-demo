@@ -4,23 +4,25 @@
 
 // Grid variables
 
-// $row-width: emCalc(1000);
+$row-width: 1000px;
 // $column-gutter: emCalc(30);
-$total-columns: 12;
+$total-columns: 12; // Caution: changing this will alter the breakpoints
 
 // $column-gutter-half: $column-gutter / 2;
+
+$grid-width: $row-width / $total-columns;
+
 
 // Column variables - use these to set your region widths
 $full-width:           $total-columns;
 $sidebar-1-width:      3;
-
 $content-width:        $full-width - $sidebar-1-width;
 
 
 // Media Queries
 
 $small-screen: 768px;
-$medium-screen: 1190px;
+$medium-screen: 1090px;
 // $large-screen: 1440px;
 
 // $screen: "only screen";
@@ -29,6 +31,10 @@ $medium-screen: 1190px;
 // $large: "only screen and (min-width: #{$large-screen})";
 // $landscape: "only screen and (orientation: landscape)";
 // $portrait: "only screen and (orientation: portrait)";
+
+// @for $i 1 through $total-columns {
+//   $grid-break-#{$i}:
+// }
 
 $print-media: "print";
 
