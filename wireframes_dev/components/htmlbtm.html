@@ -4,7 +4,11 @@
     {{wfctrl::jsrefs::/foundation/foundation.orbit.js}}
     {{wfctrl::jsrefs::/foundation/foundation.topbar.js}}
 
-  <!-- {{wfctrl::jsrefs::/vendor/jquery.infieldlabel.js}} -->
+  <!-- Flexslider -->
+
+  {{wfctrl::jsrefs::/vendor/jquery.flexslider.js}}
+  {{wfctrl::jsrefs::/custom/init_flexslider.js}}
+
 
   {{wfctrl::jsrefs::/custom/scripts.js}}
 
@@ -16,11 +20,6 @@
 <!-- Load legend overlay plugin -->
 {{legendair::js::{"key":"$$q$$"} }}
 
-<script>
-  $(document).ready(function(){
-    $("label").inFieldLabels();
-  });
-</script>
 
 </body>
 </html>
