@@ -1,3 +1,28 @@
+// Put emCalc in so it can be used
+$em-base: 16 !default;
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+@function convert-to-em($value)  {
+  $value: strip-unit($value) / strip-unit($em-base) * 1em;
+  @if ($value == 0em) { $value: 0; } // Turn 0em into 0
+  @return $value;
+}
+@function emCalc($values...) {
+  $max: length($values); // Get the total number of parameters passed
+
+  // If there is only 1 parameter, then return it as an integer.
+  // This is done because a list can't be multiplied or divided even if it contains a single value
+  @if $max == 1 { @return convert-to-em(nth($values, 1)); }
+
+  $emValues: (); // This will eventually store the converted $values in a list
+  @for $i from 1 through $max {
+    $emValues: append($emValues, convert-to-em(nth($values, $i)));
+  }
+  @return $emValues;
+}
+
+
 //
 // Layout
 //
@@ -22,7 +47,7 @@ $content-width:        $full-width - $sidebar-1-width;
 // Media Queries
 
 $small-screen: 768px;
-$medium-screen: 1090px;
+$medium-screen: 1000px;
 // $large-screen: 1440px;
 
 // $screen: "only screen";
@@ -58,3 +83,12 @@ $black:      #000000;
 //
 
 $small-font-size: 80%;
+
+// Control header font sizes
+
+$h1-font-size: emCalc(44);
+$h2-font-size: emCalc(37);
+$h3-font-size: emCalc(27);
+$h4-font-size: emCalc(23);
+$h5-font-size: emCalc(18);
+$h6-font-size: 1em;

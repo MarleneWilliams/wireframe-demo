@@ -1,0 +1,12 @@
+.cta-list {
+  img {
+    @include placeholder(100px, 500px);
+    display: block;
+  }
+  .cta-text {
+
+  }
+  .cta-item {
+    margin-bottom: 1em;
+  }
+}

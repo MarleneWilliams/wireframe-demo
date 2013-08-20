@@ -5,13 +5,6 @@
       @include placeholder(250px, 300px);
     }
   }
-  .field-name-field-date,
-  .field-name-field-location {
-    margin-bottom: 1em;
-    .label {
-      font-weight: bold;
-    }
-  }
   .field-name-body {
     clear: both;
   }

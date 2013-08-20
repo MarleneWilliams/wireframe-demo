@@ -76,3 +76,31 @@
 %read-more {
   text-align: right;
 }
+
+// Field
+%field-default {  
+  margin-bottom: 1em;
+  .label {
+    font-weight: bold;
+  }
+}
+
+%view-teaser-list {
+  .views-row {
+    margin-bottom: 1em;
+  }
+  h3 {
+    @extend .subheader;
+    font-size: $h5-font-size;
+    &.field-content {
+      margin-bottom: 0;
+    }
+  }
+  .views-field-field-news-date,
+  .views-field-body {
+    font-size: $small-font-size;
+  }
+  .views-field-field-news-date {
+    font-weight: bold;
+  }
+}

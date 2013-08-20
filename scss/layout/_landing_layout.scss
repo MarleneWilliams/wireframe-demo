@@ -1,0 +1,12 @@
+.layout-landing {
+  .row2 {
+    @include grid-row(nest);
+  }
+  .col1,
+  .col2,
+  .col3 {
+    @include respond-to(tablet) {
+      @include grid-column(4);
+    }
+  }
+}

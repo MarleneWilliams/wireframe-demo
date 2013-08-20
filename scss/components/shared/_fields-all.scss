@@ -1,0 +1,7 @@
+.field {
+  @extend %field-default;
+  img {
+    @extend %float-left;
+    @include placeholder(200px, 250px);
+  }
+}

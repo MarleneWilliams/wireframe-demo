@@ -1,0 +1,6 @@
+.view-news {
+  @extend %view-teaser-list;
+  .view-footer {
+    @extend %read-more;
+  }
+}
