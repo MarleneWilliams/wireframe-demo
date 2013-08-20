@@ -6950,13 +6950,6 @@ img.placeholder {
   text-shadow: 0 0 0.5em white;
 }
 
-/* line 3, ../scss/components/shared/_social-links.scss */
-#block-menu-menu-social-links a {
-  text-indent: -119988px;
-  overflow: hidden;
-  text-align: left;
-}
-
 /* line 2, ../scss/layout/_content_layout.scss */
 .layout-landing #content {
   position: relative;

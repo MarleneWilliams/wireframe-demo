@@ -1,7 +1,6 @@
 #block-menu-menu-social-links {
   @extend %block-title-hide;
   a {
-    @include hide-text;
   }
   .facebook {
     @include icon-font(facebook-sign);
