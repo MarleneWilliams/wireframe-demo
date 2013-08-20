@@ -1,7 +1,8 @@
 require 'rubygems'
 require 'bundler/setup'
 
-require "sass-globbing"
+require 'fontcustom'
+require 'sass-globbing'
 require 'zurb-foundation'
 # Require any additional compass plugins here.
 

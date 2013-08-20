@@ -1,0 +1,20 @@
+{
+  "fonts": [
+    "wireframe-icons_dcd3083f33d1d8141f4fac423279f114.ttf",
+    "wireframe-icons_dcd3083f33d1d8141f4fac423279f114.woff",
+    "wireframe-icons_dcd3083f33d1d8141f4fac423279f114.eot",
+    "wireframe-icons_dcd3083f33d1d8141f4fac423279f114.svg"
+  ],
+  "templates": [
+    "_wireframe-icons.scss",
+    "wireframe-icons-preview.html"
+  ],
+  "file_name": "wireframe-icons_dcd3083f33d1d8141f4fac423279f114",
+  "glyphs": [
+    "facebook-sign",
+    "facebook",
+    "twitter-sign",
+    "twitter",
+    "youtube"
+  ]
+}

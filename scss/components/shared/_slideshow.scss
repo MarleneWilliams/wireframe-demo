@@ -1,3 +1,32 @@
-.slideshow-wrapper {
-  
+.flexslider {
+  position: relative;
+  h3 {
+    margin: 0;
+  }
+  .slides {
+    li {
+      position: relative;
+    }
+  }
+}
+.flex-caption {
+  background-color: transparentize($white, 0.15);
+  bottom: 0;
+  max-width: 100%;
+  padding: .75em .75em 1.75em .75em;
+  position: absolute;
+  width: 100%;
+  .teaser {
+    @extend .subheader;
+  }
+}
+.flex-direction-nav {
+  a {
+    height: 3em;
+    margin-top: -3em;
+    &:before {
+      // @include single-text-shadow(0, 0, 1em, $white);
+      text-shadow: 0 0 .5em $white;
+    }
+  }
 }

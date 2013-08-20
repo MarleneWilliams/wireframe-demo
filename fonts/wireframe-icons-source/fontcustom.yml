@@ -14,7 +14,7 @@
 #
 # default: INPUT/fontcustom
 
-output: /
+output: fonts/wireframe-icons
 
 # ---------------------------------------------------------------------------- #
 # Templates
@@ -29,7 +29,7 @@ output: /
 #
 # default: [ css, preview ]
 
-templates: [ scss, preview, scss ]
+templates: [ fonts/wireframe-icons-source/_wireframe-icons.scss, fonts/wireframe-icons-source/wireframe-icons-preview.html ]
 
 # ---------------------------------------------------------------------------- #
 # Font Name
@@ -61,7 +61,7 @@ font_name: wireframe-icons
 #
 # default: none
 
-font_face_path: /fonts/wireframe-icons
+font_face_path: ../wireframe-icons
 
 # ---------------------------------------------------------------------------- #
 # Debug

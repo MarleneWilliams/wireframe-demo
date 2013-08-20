@@ -5,6 +5,7 @@
   .col1,
   .col2,
   .col3 {
+    @include grid-column($full-width);
     @include respond-to(tablet) {
       @include grid-column(4);
     }
