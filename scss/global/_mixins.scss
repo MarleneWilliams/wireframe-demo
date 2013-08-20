@@ -90,7 +90,16 @@
   }
 }
 
-// Padded box
+// Placeholder
+@mixin placeholder($height, $width, $bgc: $gray) {
+  background-color: $gray;
+  height: $height;
+  margin-bottom: 1em;
+  max-width: 100%;
+  width: $width;
+}
+
+// Experimental - Padded box
 @mixin padded-box($color) {
   background-color: $color;
   border-bottom: 1px solid darken($color, 10%);
@@ -104,15 +113,7 @@
   padding: 0;
 }
 
-// Placeholder
-@mixin placeholder($height, $width, $bgc: $gray) {
-  background-color: $gray;
-  height: $height;
-  margin-bottom: 1em;
-  max-width: 100%;
-  width: $width;
-}
-
+// Experimental - Making elements align in a grid
 @mixin gridify($cols) {
   $width: 100% / $cols;
   display: block;

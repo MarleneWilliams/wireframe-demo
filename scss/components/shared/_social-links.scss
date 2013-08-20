@@ -1,6 +1,15 @@
 #block-menu-menu-social-links {
   @extend %block-title-hide;
-  a {
+  ul.menu {
+    font-size: 1.75em;
+    margin: 0;
+    li {
+      margin: 0;
+      a {
+        @extend %hide-text-icon;
+        display: inline-block;
+      }
+    }
   }
   .facebook {
     @include icon-font(facebook-sign);
