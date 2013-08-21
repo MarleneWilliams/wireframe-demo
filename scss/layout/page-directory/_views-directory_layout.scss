@@ -1,0 +1,8 @@
+.view-directory {
+  .views-row {
+    clear: both;
+    @include respond-to(tablet) {
+      @include gridify(2, 2%);
+    }
+  }
+}

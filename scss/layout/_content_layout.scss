@@ -1,8 +1,12 @@
 #content {
-  .layout-landing & {
+  // No sidebars
+  .layout-landing &,
+  .layout-flex-nosidebar & {
     @include grid-column($full-width);
   }
-  .layout-default & {
+  // One sidebar, on the left
+  .layout-default &,
+  .layout-flex-sidebar & {
     @include grid-column($full-width);
     @include respond-to(tablet) {
       @include grid-column($content-width);

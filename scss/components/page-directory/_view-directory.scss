@@ -1,6 +1,19 @@
-.view-people-by-type {
-    @include block-grid(2);
+.view-directory {
   .views-row {
-    // @include gridify(2);
+    margin-bottom: 3em;
+  }
+  .views-field {
+    margin-bottom: .25em;
+    margin-left: 120px;
+  }
+  .views-field-field-person-headshot {
+    margin: 0;
+    img {
+      @include placeholder(100px, 100px);
+      margin-top: .24em;
+      @include respond-to(tablet) {
+        margin-top: .74em;
+      }
+    }
   }
 }

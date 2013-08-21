@@ -1,4 +1,5 @@
-.field {
+.field,
+.views-field {
   @extend %field-default;
   img {
     @extend %float-left;

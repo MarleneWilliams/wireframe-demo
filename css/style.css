@@ -116,7 +116,8 @@
 }
 
 /* line 66, ../scss/global/_extends.scss */
-.node-event .field-name-field-image, .field img {
+.node-event .field-name-field-image, .field img,
+.views-field img {
   float: left;
   margin: 0 1em 1em 0;
 }
@@ -136,11 +137,13 @@
 }
 
 /* line 100, ../scss/global/_extends.scss */
-.field {
+.field,
+.views-field {
   margin-bottom: 1em;
 }
 /* line 102, ../scss/global/_extends.scss */
-.field .label {
+.field .label,
+.views-field .label {
   font-weight: bold;
 }
 
@@ -6304,13 +6307,60 @@ input[type="submit"] {
   clear: both;
 }
 
+/* line 12, ../scss/components/legend/_legend_overlay.scss */
+#navigation-utility .meta-overlay {
+  top: -4px;
+  left: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 18, ../scss/components/legend/_legend_overlay.scss */
+  .meta-overlay-show {
+    display: inline-block;
+  }
+
+  /* line 21, ../scss/components/legend/_legend_overlay.scss */
+  .legend-overlay-notes.meta-overlay-show {
+    display: block;
+  }
+
+  /* line 24, ../scss/components/legend/_legend_overlay.scss */
+  .meta-overlay-toggle {
+    display: block;
+  }
+}
+/* line 29, ../scss/components/legend/_legend_overlay.scss */
+.events-list .meta-overlay {
+  display: none;
+}
+
+/* line 33, ../scss/components/legend/_legend_overlay.scss */
+.legend-overlay-notes {
+  padding-top: 10px;
+  display: none;
+  background-color: #faa;
+}
+/* line 37, ../scss/components/legend/_legend_overlay.scss */
+.legend-overlay-notes dl {
+  padding-top: 10px;
+}
+/* line 40, ../scss/components/legend/_legend_overlay.scss */
+.legend-overlay-notes dt, .legend-overlay-notes dd {
+  float: left;
+}
+/* line 43, ../scss/components/legend/_legend_overlay.scss */
+.legend-overlay-notes dt {
+  width: 30px;
+  clear: left;
+}
+
 @media only screen and (min-width: 768px) {
   /* line 1, ../scss/components/page-calendar/_block-calendar-list.scss */
   .block-calendar-list {
     display: none;
   }
 }
-/* line 35, ../scss/global/_mixins.scss */
+/* line 13, ../scss/global/_mixins.scss */
 .lt-ie9 .block-calendar-list {
   display: none;
 }
@@ -6325,46 +6375,42 @@ input[type="submit"] {
     display: block;
   }
 }
-/* line 35, ../scss/global/_mixins.scss */
+/* line 13, ../scss/global/_mixins.scss */
 .lt-ie9 .block-calendar {
   display: block;
 }
 
-/* line 1, ../scss/components/page-directory/_view-directory.scss */
-.view-people-by-type {
-  display: block;
-  padding: 0;
-  margin: 0 -0.625em;
-  *zoom: 1;
+/* line 2, ../scss/components/page-directory/_view-directory.scss */
+.view-directory .views-row {
+  margin-bottom: 3em;
 }
-/* line 121, ../../../../../Users/marlene/.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
-.view-people-by-type:before, .view-people-by-type:after {
-  content: " ";
-  display: table;
+/* line 5, ../scss/components/page-directory/_view-directory.scss */
+.view-directory .views-field {
+  margin-bottom: .25em;
+  margin-left: 120px;
 }
-/* line 122, ../../../../../Users/marlene/.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
-.view-people-by-type:after {
-  clear: both;
+/* line 9, ../scss/components/page-directory/_view-directory.scss */
+.view-directory .views-field-field-person-headshot {
+  margin: 0;
 }
-/* line 27, ../../../../../Users/marlene/.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
-.view-people-by-type > li {
-  display: inline;
-  height: auto;
-  float: left;
-  padding: 0 0.625em 1.25em;
+/* line 11, ../scss/components/page-directory/_view-directory.scss */
+.view-directory .views-field-field-person-headshot img {
+  background-color: gray;
+  height: 100px;
+  margin-bottom: 1em;
+  max-width: 100%;
+  width: 100px;
+  margin-top: .24em;
 }
-/* line 36, ../../../../../Users/marlene/.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
-.view-people-by-type > li {
-  width: 50%;
-  padding: 0 0.625em 1.25em;
+@media only screen and (min-width: 768px) {
+  /* line 11, ../scss/components/page-directory/_view-directory.scss */
+  .view-directory .views-field-field-person-headshot img {
+    margin-top: .74em;
+  }
 }
-/* line 40, ../../../../../Users/marlene/.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
-.view-people-by-type > li:nth-of-type(n) {
-  clear: none;
-}
-/* line 41, ../../../../../Users/marlene/.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
-.view-people-by-type > li:nth-of-type(2n+1) {
-  clear: both;
+/* line 13, ../scss/global/_mixins.scss */
+.lt-ie9 .view-directory .views-field-field-person-headshot img {
+  margin-top: .74em;
 }
 
 /* line 1, ../scss/components/shared/_blocks-all.scss */
@@ -6470,8 +6516,9 @@ input[type="submit"] {
   margin-bottom: 1em;
 }
 
-/* line 3, ../scss/components/shared/_fields-all.scss */
-.field img {
+/* line 4, ../scss/components/shared/_fields-all.scss */
+.field img,
+.views-field img {
   background-color: gray;
   height: 200px;
   margin-bottom: 1em;
@@ -6833,7 +6880,7 @@ html[xmlns] .slides {
     text-align: right;
   }
 }
-/* line 35, ../scss/global/_mixins.scss */
+/* line 13, ../scss/global/_mixins.scss */
 .lt-ie9 #block-block-1 {
   text-align: right;
 }
@@ -6973,16 +7020,16 @@ img.placeholder {
   display: inline-block;
 }
 
-/* line 2, ../scss/layout/_content_layout.scss */
-.layout-landing #content {
+/* line 4, ../scss/layout/_content_layout.scss */
+.layout-landing #content, .layout-flex-nosidebar #content {
   position: relative;
   padding-left: 0.9375em;
   padding-right: 0.9375em;
   width: 100%;
   float: left;
 }
-/* line 5, ../scss/layout/_content_layout.scss */
-.layout-default #content {
+/* line 9, ../scss/layout/_content_layout.scss */
+.layout-default #content, .layout-flex-sidebar #content {
   position: relative;
   padding-left: 0.9375em;
   padding-right: 0.9375em;
@@ -6990,8 +7037,8 @@ img.placeholder {
   float: left;
 }
 @media only screen and (min-width: 768px) {
-  /* line 5, ../scss/layout/_content_layout.scss */
-  .layout-default #content {
+  /* line 9, ../scss/layout/_content_layout.scss */
+  .layout-default #content, .layout-flex-sidebar #content {
     position: relative;
     padding-left: 0.9375em;
     padding-right: 0.9375em;
@@ -6999,8 +7046,8 @@ img.placeholder {
     float: left;
   }
 }
-/* line 35, ../scss/global/_mixins.scss */
-.lt-ie9 .layout-default #content {
+/* line 13, ../scss/global/_mixins.scss */
+.lt-ie9 .layout-default #content, .lt-ie9 .layout-flex-sidebar #content {
   position: relative;
   padding-left: 0.9375em;
   padding-right: 0.9375em;
@@ -7054,61 +7101,9 @@ img.placeholder {
     padding-top: 3em;
   }
 }
-/* line 35, ../scss/global/_mixins.scss */
+/* line 13, ../scss/global/_mixins.scss */
 .lt-ie9 #header .inner {
   padding-top: 3em;
-}
-
-/* line 2, ../scss/layout/_landing_layout.scss */
-.layout-landing .row2 {
-  width: auto;
-  margin-left: -0.9375em;
-  margin-right: -0.9375em;
-  margin-top: 0;
-  margin-bottom: 0;
-  max-width: none;
-  *zoom: 1;
-}
-/* line 121, ../../../../../Users/marlene/.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
-.layout-landing .row2:before, .layout-landing .row2:after {
-  content: " ";
-  display: table;
-}
-/* line 122, ../../../../../Users/marlene/.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
-.layout-landing .row2:after {
-  clear: both;
-}
-/* line 7, ../scss/layout/_landing_layout.scss */
-.layout-landing .col1,
-.layout-landing .col2,
-.layout-landing .col3 {
-  position: relative;
-  padding-left: 0.9375em;
-  padding-right: 0.9375em;
-  width: 100%;
-  float: left;
-}
-@media only screen and (min-width: 768px) {
-  /* line 7, ../scss/layout/_landing_layout.scss */
-  .layout-landing .col1,
-  .layout-landing .col2,
-  .layout-landing .col3 {
-    position: relative;
-    padding-left: 0.9375em;
-    padding-right: 0.9375em;
-    width: 33.33333%;
-    float: left;
-  }
-}
-/* line 35, ../scss/global/_mixins.scss */
-.lt-ie9 .layout-landing .col1, .lt-ie9
-.layout-landing .col2, .lt-ie9
-.layout-landing .col3 {
-  position: relative;
-  padding-left: 0.9375em;
-  padding-right: 0.9375em;
-  width: 33.33333%;
-  float: left;
 }
 
 /* line 1, ../scss/layout/_main_layout.scss */
@@ -7131,6 +7126,92 @@ img.placeholder {
   clear: both;
 }
 
+/* line 9, ../scss/layout/_rows-cols_layout.scss */
+.layout-landing .row2, .layout-flex-sidebar .row2, .layout-flex-nosidebar .row2 {
+  width: auto;
+  margin-left: -0.9375em;
+  margin-right: -0.9375em;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: none;
+  *zoom: 1;
+}
+/* line 121, ../../../../../Users/marlene/.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
+.layout-landing .row2:before, .layout-landing .row2:after, .layout-flex-sidebar .row2:before, .layout-flex-sidebar .row2:after, .layout-flex-nosidebar .row2:before, .layout-flex-nosidebar .row2:after {
+  content: " ";
+  display: table;
+}
+/* line 122, ../../../../../Users/marlene/.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
+.layout-landing .row2:after, .layout-flex-sidebar .row2:after, .layout-flex-nosidebar .row2:after {
+  clear: both;
+}
+
+/* line 22, ../scss/layout/_rows-cols_layout.scss */
+.layout-flex-sidebar .col1, .layout-flex-nosidebar .col1, .layout-flex-sidebar
+.col2, .layout-flex-nosidebar
+.col2 {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 100%;
+  float: left;
+}
+@media only screen and (min-width: 768px) {
+  /* line 22, ../scss/layout/_rows-cols_layout.scss */
+  .layout-flex-sidebar .col1, .layout-flex-nosidebar .col1, .layout-flex-sidebar
+  .col2, .layout-flex-nosidebar
+  .col2 {
+    position: relative;
+    padding-left: 0.9375em;
+    padding-right: 0.9375em;
+    width: 50%;
+    float: left;
+  }
+}
+/* line 13, ../scss/global/_mixins.scss */
+.lt-ie9 .layout-flex-sidebar .col1, .lt-ie9 .layout-flex-nosidebar .col1, .lt-ie9 .layout-flex-sidebar
+.col2, .lt-ie9 .layout-flex-nosidebar
+.col2 {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 50%;
+  float: left;
+}
+
+/* line 34, ../scss/layout/_rows-cols_layout.scss */
+.layout-landing .col1, .layout-landing
+.col2, .layout-landing
+.col3 {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 100%;
+  float: left;
+}
+@media only screen and (min-width: 768px) {
+  /* line 34, ../scss/layout/_rows-cols_layout.scss */
+  .layout-landing .col1, .layout-landing
+  .col2, .layout-landing
+  .col3 {
+    position: relative;
+    padding-left: 0.9375em;
+    padding-right: 0.9375em;
+    width: 33.33333%;
+    float: left;
+  }
+}
+/* line 13, ../scss/global/_mixins.scss */
+.lt-ie9 .layout-landing .col1, .lt-ie9 .layout-landing
+.col2, .lt-ie9 .layout-landing
+.col3 {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 33.33333%;
+  float: left;
+}
+
 /* line 1, ../scss/layout/_sidebar_layout.scss */
 .sidebar {
   position: relative;
@@ -7149,7 +7230,7 @@ img.placeholder {
     float: left;
   }
 }
-/* line 35, ../scss/global/_mixins.scss */
+/* line 13, ../scss/global/_mixins.scss */
 .lt-ie9 .sidebar {
   position: relative;
   padding-left: 0.9375em;
@@ -7497,7 +7578,7 @@ html.lt-ie9 #block-menu-menu-footer-menu ul ul li {
     float: left;
   }
 }
-/* line 35, ../scss/global/_mixins.scss */
+/* line 13, ../scss/global/_mixins.scss */
 .lt-ie9 #block-block-1 {
   position: relative;
   padding-left: 0.9375em;
@@ -7544,7 +7625,7 @@ html.lt-ie9 #block-menu-menu-footer-menu ul ul li {
     display: block;
   }
 }
-/* line 35, ../scss/global/_mixins.scss */
+/* line 13, ../scss/global/_mixins.scss */
 .lt-ie9 #block-menu-menu-social-links {
   position: relative;
   padding-left: 0.9375em;
@@ -7594,7 +7675,7 @@ html.lt-ie9 #block-menu-menu-footer-menu ul ul li {
     text-align: left;
   }
 }
-/* line 35, ../scss/global/_mixins.scss */
+/* line 13, ../scss/global/_mixins.scss */
 .lt-ie9 .logo-link {
   position: relative;
   padding-left: 0.9375em;
@@ -7642,7 +7723,7 @@ html.lt-ie9 #block-menu-menu-footer-menu ul ul li {
     display: block;
   }
 }
-/* line 35, ../scss/global/_mixins.scss */
+/* line 13, ../scss/global/_mixins.scss */
 .lt-ie9 #block-menu-menu-audience-menu {
   position: absolute;
   right: 0;
@@ -7704,7 +7785,7 @@ html.lt-ie9 #block-menu-menu-footer-menu ul ul li {
     margin-top: 0;
   }
 }
-/* line 35, ../scss/global/_mixins.scss */
+/* line 13, ../scss/global/_mixins.scss */
 .lt-ie9 #site-name {
   position: relative;
   padding-left: 0.9375em;
@@ -7728,7 +7809,7 @@ html.lt-ie9 #block-menu-menu-footer-menu ul ul li {
     float: left;
   }
 }
-/* line 46, ../scss/global/_mixins.scss */
+/* line 24, ../scss/global/_mixins.scss */
 html.lt-ie9 #site-name {
   position: relative;
   padding-left: 0.9375em;
@@ -7740,6 +7821,45 @@ html.lt-ie9 #site-name {
 /* line 1, ../scss/layout/header-blocks/_wf-admin_menu.scss */
 .wf-admin-menu {
   background-color: #e6e6e6;
+}
+
+/* line 2, ../scss/layout/page-directory/_views-directory_layout.scss */
+.view-directory .views-row {
+  clear: both;
+}
+@media only screen and (min-width: 768px) {
+  /* line 2, ../scss/layout/page-directory/_views-directory_layout.scss */
+  .view-directory .views-row {
+    clear: none;
+    display: block;
+    float: left;
+    margin-right: 2%;
+    width: 49%;
+  }
+  /* line 92, ../scss/global/_mixins.scss */
+  .view-directory .views-row:nth-child(2n+3) {
+    clear: left;
+  }
+  /* line 95, ../scss/global/_mixins.scss */
+  .view-directory .views-row:nth-child(2n+2) {
+    margin-right: 0;
+  }
+}
+/* line 13, ../scss/global/_mixins.scss */
+.lt-ie9 .view-directory .views-row {
+  clear: none;
+  display: block;
+  float: left;
+  margin-right: 2%;
+  width: 49%;
+}
+/* line 92, ../scss/global/_mixins.scss */
+.lt-ie9 .view-directory .views-row:nth-child(2n+3) {
+  clear: left;
+}
+/* line 95, ../scss/global/_mixins.scss */
+.lt-ie9 .view-directory .views-row:nth-child(2n+2) {
+  margin-right: 0;
 }
 
 /* line 3, ../scss/layout/shared/_search-box_layout.scss */
@@ -7770,7 +7890,7 @@ html.lt-ie9 #site-name {
     clear: none;
   }
 }
-/* line 35, ../scss/global/_mixins.scss */
+/* line 13, ../scss/global/_mixins.scss */
 .lt-ie9 #header .block-search {
   position: relative;
   padding-left: 0.9375em;
@@ -7789,7 +7909,7 @@ html.lt-ie9 #site-name {
     float: left;
   }
 }
-/* line 46, ../scss/global/_mixins.scss */
+/* line 24, ../scss/global/_mixins.scss */
 html.lt-ie9 #header .block-search {
   position: relative;
   padding-left: 0.9375em;

@@ -1,0 +1,40 @@
+//
+// Rows
+//
+
+// Row 2
+.row2 {
+  .layout-landing &,
+  .layout-flex-sidebar &,
+  .layout-flex-nosidebar & {
+    @include grid-row(nest);
+  }
+}
+
+//
+// Columns
+//
+
+// Two-column rows
+.col1,
+.col2 {
+  .layout-flex-sidebar &,
+  .layout-flex-nosidebar & {
+    @include grid-column($full-width);
+    @include respond-to(tablet) {
+      @include grid-column(6);
+    }
+  }
+}
+
+// Three-column rows
+.col1,
+.col2,
+.col3 {
+  .layout-landing & {
+    @include grid-column($full-width);
+    @include respond-to(tablet) {
+      @include grid-column(4);
+    }
+  }
+}

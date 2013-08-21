@@ -2,30 +2,8 @@
 // Media queries
 //
 
-@mixin grid-break($grid-number) {
-  $grid-break: $grid-width * $grid-number;
-  @media only screen and (min-width: #{$grid-break}) {
-    @content;
-  }
-  // For IE versions less-than-9, so they can get the media query styles
-  .lt-ie9 &{
-    @content;
-  }
-}
-
 // Respond-to
 @mixin respond-to($target) {
-  // Grid-based
-  // @if $target == grid-#{$grid-number} {
-  //   $grid-break: $grid-width * $grid-number;
-  //   @media only screen and (min-width: #{$grid-break}) {
-  //     @content;
-  //   }
-  //   // For IE versions less-than-9, so they can get the media query styles
-  //   .lt-ie9 &{
-  //     @content;
-  //   }
-  // }
   // For tablet on up
   @if $target == tablet {
     @media #{$small} {
@@ -99,6 +77,26 @@
   width: $width;
 }
 
+// Making elements align in a grid, regardless of height
+// Apply to elements you want as grid items
+// $cols = how many columns you want
+// $mr = margin-right, should be in percent
+@mixin gridify($cols, $mr: 5%) {
+  $width: (100% / $cols) - $mr + ($mr / $cols);
+  $clearnum: $cols + 1;
+  clear: none;
+  display: block;
+  float: left;
+  margin-right: $mr;
+  width: $width;
+  &:nth-child(#{$cols}n+#{$clearnum}) {
+    clear: left;
+  }
+  &:nth-child(#{$cols}n+#{$cols}) {
+    margin-right: 0;
+  }
+}
+
 // Experimental - Padded box
 @mixin padded-box($color) {
   background-color: $color;
@@ -111,12 +109,4 @@
   border-bottom: 0 none;
   margin-bottom: 0;
   padding: 0;
-}
-
-// Experimental - Making elements align in a grid
-@mixin gridify($cols) {
-  $width: 100% / $cols;
-  display: block;
-  float: left;
-  width: $width;
 }
