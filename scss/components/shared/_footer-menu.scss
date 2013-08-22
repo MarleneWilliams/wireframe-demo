@@ -2,8 +2,9 @@
   @extend %block-title-hide;
   ul {
     @extend .side-nav;
-    // @extend .no-bullet;
     @extend %sidebar-menu;
+    border-bottom: 0 none;
+    padding: 0;
     li {
       // @include padded-box($gray-lighter);
       margin-bottom: 0;
