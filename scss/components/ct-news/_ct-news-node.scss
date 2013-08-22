@@ -1,0 +1,9 @@
+.node-news {
+  .field-name-field-image {
+    @extend %float-left;
+    img {
+      @include placeholder(400px, 795px);
+      margin: 0;
+    }
+  }
+}
