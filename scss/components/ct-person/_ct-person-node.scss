@@ -1,0 +1,20 @@
+.node-person {
+  .field, .views-field {
+    line-height: 1.5;
+    margin: 0; 
+  }
+  .field-name-body, .field-type-text-with-summary {
+    clear: both;
+  }
+} /* END: .node-person */
+
+.sidebars {
+  .related-files {
+	ul {
+	  display: block;
+	  list-style-position: outside;
+	  list-style: none;
+	  margin: 0;
+	}
+  } /* END: .related-files */
+}
