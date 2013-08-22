@@ -1,0 +1,5 @@
+.estimated-cost {
+  img {
+    @include placeholder(300px, 100%, $gray-light);
+  }
+}

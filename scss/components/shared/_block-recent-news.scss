@@ -1,5 +1,8 @@
 .view-news {
   @extend %view-teaser-list;
+  .views-field {
+    margin-bottom: .5em;
+  }
   .view-footer {
     @extend %read-more;
   }

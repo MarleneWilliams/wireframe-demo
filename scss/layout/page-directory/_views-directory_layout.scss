@@ -1,23 +1,4 @@
 .view-directory {
-  .views-exposed-form {
-    // @include grid-row(nest); // Use this if you want to collapse its padding
-    @include grid-row;
-    background-color: lighten($gray-lighter, 5%);
-    padding-top: .75em;
-  }
-  .views-exposed-widget {
-    @include grid-column($full-width);
-    @include respond-to(tablet) {
-      @include grid-column(4);
-    }
-  }
-  .views-submit-button {
-    clear: left;
-  }
-  .views-submit-button,
-  .views-reset-button {
-    width: auto;
-  }
   .views-row {
     @include respond-to(tablet) {
       @include gridify(2, 2%);

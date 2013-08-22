@@ -8,7 +8,14 @@
       ul {
         margin-bottom: 1.875em;
         // padding: 0 1%;
+        width: 100%;
+        ul {
+          width: auto;
+        }
       }
+    }
+    .last {
+      float: right;
     }
   }
 }

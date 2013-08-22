@@ -1,6 +1,11 @@
 form {
   .form-item {
     position:relative;
+    @include respond-to(tablet) {
+      select {
+        // width: auto;
+      }
+    }
     label {
       // @extend input[type="text"];
       // @include box-shadow(0);
@@ -21,4 +26,25 @@ input[type="reset"],
 input[type="submit"] {
   @extend .button;
   font-size: .75em;
+}
+
+// Views forms
+.views-exposed-form {
+  // @include grid-row(nest); // Use this if you want to collapse its padding
+  @include grid-row;
+  background-color: lighten($gray-lighter, 5%);
+  padding-top: .75em;
+}
+.views-exposed-widget {
+  @include grid-column($full-width);
+  @include respond-to(tablet) {
+    @include grid-column(4);
+  }
+}
+.views-submit-button {
+  clear: left;
+}
+.views-submit-button,
+.views-reset-button {
+  width: auto;
 }

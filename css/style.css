@@ -3022,7 +3022,7 @@ dl {
   font-size: 1em;
   line-height: 1.6;
   margin-bottom: 1.25em;
-  list-style-position: outside;
+  list-style-position: inside;
   font-family: inherit;
 }
 
@@ -6939,12 +6939,72 @@ form .form-item {
   position: relative;
 }
 
-/* line 21, ../scss/base/html/_forms.scss */
+/* line 26, ../scss/base/html/_forms.scss */
 button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   font-size: .75em;
+}
+
+/* line 32, ../scss/base/html/_forms.scss */
+.views-exposed-form {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 68.75em;
+  *zoom: 1;
+  background-color: #f2f2f2;
+  padding-top: .75em;
+}
+/* line 121, ../../../../../Users/marlene/.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
+.views-exposed-form:before, .views-exposed-form:after {
+  content: " ";
+  display: table;
+}
+/* line 122, ../../../../../Users/marlene/.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
+.views-exposed-form:after {
+  clear: both;
+}
+
+/* line 38, ../scss/base/html/_forms.scss */
+.views-exposed-widget {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 100%;
+  float: left;
+}
+@media only screen and (min-width: 48em) {
+  /* line 38, ../scss/base/html/_forms.scss */
+  .views-exposed-widget {
+    position: relative;
+    padding-left: 0.9375em;
+    padding-right: 0.9375em;
+    width: 33.33333%;
+    float: left;
+  }
+}
+/* line 13, ../scss/global/_mixins.scss */
+.lt-ie9 .views-exposed-widget {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 33.33333%;
+  float: left;
+}
+
+/* line 44, ../scss/base/html/_forms.scss */
+.views-submit-button {
+  clear: left;
+}
+
+/* line 48, ../scss/base/html/_forms.scss */
+.views-submit-button,
+.views-reset-button {
+  width: auto;
 }
 
 /* line 1, ../scss/base/page/_content.scss */
@@ -6972,15 +7032,19 @@ input[type="submit"] {
   margin-bottom: .5em;
 }
 /* line 9, ../scss/components/ct-event/_block-upcoming-events.scss */
+#block-view-upcoming-events .views-field {
+  margin-bottom: 0;
+}
+/* line 12, ../scss/components/ct-event/_block-upcoming-events.scss */
 #block-view-upcoming-events .views-field-title {
   font-size: 1em;
   font-weight: bold;
 }
-/* line 12, ../scss/components/ct-event/_block-upcoming-events.scss */
+/* line 15, ../scss/components/ct-event/_block-upcoming-events.scss */
 #block-view-upcoming-events .views-field-title h3 {
   font-size: 1em;
 }
-/* line 18, ../scss/components/ct-event/_block-upcoming-events.scss */
+/* line 21, ../scss/components/ct-event/_block-upcoming-events.scss */
 #block-view-upcoming-events .views-field-nothing {
   display: block;
   float: left;
@@ -6990,32 +7054,32 @@ input[type="submit"] {
   padding-left: 0;
   width: 30%;
 }
-/* line 26, ../scss/components/ct-event/_block-upcoming-events.scss */
+/* line 29, ../scss/components/ct-event/_block-upcoming-events.scss */
 #block-view-upcoming-events .views-field-nothing .event-calendar-date {
   display: block;
   font-weight: normal;
   text-align: center;
 }
-/* line 30, ../scss/components/ct-event/_block-upcoming-events.scss */
+/* line 33, ../scss/components/ct-event/_block-upcoming-events.scss */
 #block-view-upcoming-events .views-field-nothing .event-calendar-date a, #block-view-upcoming-events .views-field-nothing .event-calendar-date a:link, #block-view-upcoming-events .views-field-nothing .event-calendar-date a:visited, #block-view-upcoming-events .views-field-nothing .event-calendar-date a:hover, #block-view-upcoming-events .views-field-nothing .event-calendar-date a:active, #block-view-upcoming-events .views-field-nothing .event-calendar-date a:focus {
   border-bottom: 0 none;
   font-weight: normal;
 }
-/* line 34, ../scss/components/ct-event/_block-upcoming-events.scss */
+/* line 37, ../scss/components/ct-event/_block-upcoming-events.scss */
 #block-view-upcoming-events .views-field-nothing .event-calendar-date .event-month {
   font-size: 1.25em;
   display: block;
   line-height: 1;
   text-transform: uppercase;
 }
-/* line 41, ../scss/components/ct-event/_block-upcoming-events.scss */
+/* line 44, ../scss/components/ct-event/_block-upcoming-events.scss */
 #block-view-upcoming-events .views-field-nothing .event-calendar-date .event-day {
   display: block;
   font-size: 2.25em;
   line-height: 1em;
   padding: 0 0 .25em 0;
 }
-/* line 50, ../scss/components/ct-event/_block-upcoming-events.scss */
+/* line 53, ../scss/components/ct-event/_block-upcoming-events.scss */
 #block-view-upcoming-events .views-field-field-event-liblocation {
   font-size: .9em;
   font-style: italic;
@@ -7024,15 +7088,40 @@ input[type="submit"] {
 
 /* line 4, ../scss/components/ct-event/_ct-event-node.scss */
 .node-event .field-name-field-image img {
+  -webkit-transition: background-color 0.25s;
+  -moz-transition: background-color 0.25s;
+  -o-transition: background-color 0.25s;
+  transition: background-color 0.25s;
   background-color: gray;
   height: 250px;
   margin-bottom: 1em;
   max-width: 100%;
   width: 300px;
 }
+/* line 79, ../scss/global/_mixins.scss */
+.node-event .field-name-field-image img:hover {
+  background-color: #8c8c8c;
+}
 /* line 8, ../scss/components/ct-event/_ct-event-node.scss */
 .node-event .field-name-body {
   clear: both;
+}
+
+/* line 2, ../scss/components/ct-flexpage/_estimated-cost.scss */
+.estimated-cost img {
+  -webkit-transition: background-color 0.25s;
+  -moz-transition: background-color 0.25s;
+  -o-transition: background-color 0.25s;
+  transition: background-color 0.25s;
+  background-color: #bfbfbf;
+  height: 300px;
+  margin-bottom: 1em;
+  max-width: 100%;
+  width: 100%;
+}
+/* line 79, ../scss/global/_mixins.scss */
+.estimated-cost img:hover {
+  background-color: #cccccc;
 }
 
 @media only screen and (min-width: 48em) {
@@ -7076,12 +7165,20 @@ input[type="submit"] {
 }
 /* line 11, ../scss/components/page-directory/_view-directory.scss */
 .view-directory .views-field-field-person-headshot img {
+  -webkit-transition: background-color 0.25s;
+  -moz-transition: background-color 0.25s;
+  -o-transition: background-color 0.25s;
+  transition: background-color 0.25s;
   background-color: gray;
   height: 100px;
   margin-bottom: 1em;
   max-width: 100%;
   width: 100px;
   margin-top: .24em;
+}
+/* line 79, ../scss/global/_mixins.scss */
+.view-directory .views-field-field-person-headshot img:hover {
+  background-color: #8c8c8c;
 }
 @media only screen and (min-width: 48em) {
   /* line 11, ../scss/components/page-directory/_view-directory.scss */
@@ -7094,6 +7191,11 @@ input[type="submit"] {
   margin-top: .74em;
 }
 
+/* line 3, ../scss/components/shared/_block-recent-news.scss */
+.view-news .views-field {
+  margin-bottom: .5em;
+}
+
 /* line 1, ../scss/components/shared/_blocks-all.scss */
 .block-title {
   font-size: 1.6875em;
@@ -7103,7 +7205,7 @@ input[type="submit"] {
 
 /* line 7, ../scss/components/shared/_blocks-all.scss */
 .block {
-  margin-bottom: .5em;
+  margin-bottom: 2em;
 }
 
 /* line 1, ../scss/components/shared/_breadcrumb.scss */
@@ -7185,12 +7287,20 @@ input[type="submit"] {
 
 /* line 2, ../scss/components/shared/_cta.scss */
 .cta-list img {
+  -webkit-transition: background-color 0.25s;
+  -moz-transition: background-color 0.25s;
+  -o-transition: background-color 0.25s;
+  transition: background-color 0.25s;
   background-color: gray;
   height: 100px;
   margin-bottom: 1em;
   max-width: 100%;
   width: 500px;
   display: block;
+}
+/* line 79, ../scss/global/_mixins.scss */
+.cta-list img:hover {
+  background-color: #8c8c8c;
 }
 /* line 9, ../scss/components/shared/_cta.scss */
 .cta-list .cta-item {
@@ -7200,11 +7310,20 @@ input[type="submit"] {
 /* line 4, ../scss/components/shared/_fields-all.scss */
 .field img,
 .views-field img {
+  -webkit-transition: background-color 0.25s;
+  -moz-transition: background-color 0.25s;
+  -o-transition: background-color 0.25s;
+  transition: background-color 0.25s;
   background-color: gray;
   height: 200px;
   margin-bottom: 1em;
   max-width: 100%;
   width: 250px;
+}
+/* line 79, ../scss/global/_mixins.scss */
+.field img:hover,
+.views-field img:hover {
+  background-color: #8c8c8c;
 }
 
 /*
@@ -7599,11 +7718,19 @@ html[xmlns] .slides {
 
 /* line 18, ../scss/components/shared/_placeholder.scss */
 img.placeholder {
+  -webkit-transition: background-color 0.25s;
+  -moz-transition: background-color 0.25s;
+  -o-transition: background-color 0.25s;
+  transition: background-color 0.25s;
   background-color: gray;
   height: 180px;
   margin-bottom: 1em;
   max-width: 100%;
   width: 220px;
+}
+/* line 79, ../scss/global/_mixins.scss */
+img.placeholder:hover {
+  background-color: #8c8c8c;
 }
 
 /* line 3, ../scss/components/shared/_primary-menu.scss */
@@ -8500,6 +8627,15 @@ html.lt-ie9 #block-menu-menu-footer-menu ul ul li {
   /* line 8, ../scss/layout/header-blocks/_primary-menu_layout.scss */
   .primary-menu .top-bar-section ul {
     margin-bottom: 1.875em;
+    width: 100%;
+  }
+  /* line 12, ../scss/layout/header-blocks/_primary-menu_layout.scss */
+  .primary-menu .top-bar-section ul ul {
+    width: auto;
+  }
+  /* line 17, ../scss/layout/header-blocks/_primary-menu_layout.scss */
+  .primary-menu .last {
+    float: right;
   }
 }
 /* line 4, ../scss/layout/header-blocks/_primary-menu_layout.scss */
@@ -8509,6 +8645,15 @@ html.lt-ie9 #block-menu-menu-footer-menu ul ul li {
 /* line 8, ../scss/layout/header-blocks/_primary-menu_layout.scss */
 .lt-ie9 .primary-menu .top-bar-section ul {
   margin-bottom: 1.875em;
+  width: 100%;
+}
+/* line 12, ../scss/layout/header-blocks/_primary-menu_layout.scss */
+.lt-ie9 .primary-menu .top-bar-section ul ul {
+  width: auto;
+}
+/* line 17, ../scss/layout/header-blocks/_primary-menu_layout.scss */
+.lt-ie9 .primary-menu .last {
+  float: right;
 }
 
 /* line 1, ../scss/layout/header-blocks/_site-name_layout.scss */
@@ -8569,64 +8714,8 @@ html.lt-ie9 #site-name {
   float: left;
 }
 
-/* line 2, ../scss/layout/page-directory/_views-directory_layout.scss */
-.view-directory .views-exposed-form {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-  margin-bottom: 0;
-  max-width: 68.75em;
-  *zoom: 1;
-  background-color: #f2f2f2;
-  padding-top: .75em;
-}
-/* line 121, ../../../../../Users/marlene/.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
-.view-directory .views-exposed-form:before, .view-directory .views-exposed-form:after {
-  content: " ";
-  display: table;
-}
-/* line 122, ../../../../../Users/marlene/.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
-.view-directory .views-exposed-form:after {
-  clear: both;
-}
-/* line 8, ../scss/layout/page-directory/_views-directory_layout.scss */
-.view-directory .views-exposed-widget {
-  position: relative;
-  padding-left: 0.9375em;
-  padding-right: 0.9375em;
-  width: 100%;
-  float: left;
-}
 @media only screen and (min-width: 48em) {
-  /* line 8, ../scss/layout/page-directory/_views-directory_layout.scss */
-  .view-directory .views-exposed-widget {
-    position: relative;
-    padding-left: 0.9375em;
-    padding-right: 0.9375em;
-    width: 33.33333%;
-    float: left;
-  }
-}
-/* line 13, ../scss/global/_mixins.scss */
-.lt-ie9 .view-directory .views-exposed-widget {
-  position: relative;
-  padding-left: 0.9375em;
-  padding-right: 0.9375em;
-  width: 33.33333%;
-  float: left;
-}
-/* line 14, ../scss/layout/page-directory/_views-directory_layout.scss */
-.view-directory .views-submit-button {
-  clear: left;
-}
-/* line 18, ../scss/layout/page-directory/_views-directory_layout.scss */
-.view-directory .views-submit-button,
-.view-directory .views-reset-button {
-  width: auto;
-}
-@media only screen and (min-width: 48em) {
-  /* line 21, ../scss/layout/page-directory/_views-directory_layout.scss */
+  /* line 2, ../scss/layout/page-directory/_views-directory_layout.scss */
   .view-directory .views-row {
     clear: none;
     display: block;
@@ -8634,20 +8723,20 @@ html.lt-ie9 #site-name {
     margin-right: 2%;
     width: 49%;
   }
-  /* line 97, ../scss/global/_mixins.scss */
+  /* line 101, ../scss/global/_mixins.scss */
   .view-directory .views-row:nth-child(odd), .view-directory .views-row:nth-child(even) {
     clear: none;
     margin-right: 2%;
   }
-  /* line 103, ../scss/global/_mixins.scss */
+  /* line 107, ../scss/global/_mixins.scss */
   .view-directory .views-row:nth-child(2n+3) {
     clear: left;
   }
-  /* line 107, ../scss/global/_mixins.scss */
+  /* line 111, ../scss/global/_mixins.scss */
   .view-directory .views-row:nth-child(2n+2) {
     margin-right: 0;
   }
-  /* line 112, ../scss/global/_mixins.scss */
+  /* line 116, ../scss/global/_mixins.scss */
   .ie-8 .view-directory .views-row {
     height: auto;
   }
@@ -8660,20 +8749,20 @@ html.lt-ie9 #site-name {
   margin-right: 2%;
   width: 49%;
 }
-/* line 97, ../scss/global/_mixins.scss */
+/* line 101, ../scss/global/_mixins.scss */
 .lt-ie9 .view-directory .views-row:nth-child(odd), .lt-ie9 .view-directory .views-row:nth-child(even) {
   clear: none;
   margin-right: 2%;
 }
-/* line 103, ../scss/global/_mixins.scss */
+/* line 107, ../scss/global/_mixins.scss */
 .lt-ie9 .view-directory .views-row:nth-child(2n+3) {
   clear: left;
 }
-/* line 107, ../scss/global/_mixins.scss */
+/* line 111, ../scss/global/_mixins.scss */
 .lt-ie9 .view-directory .views-row:nth-child(2n+2) {
   margin-right: 0;
 }
-/* line 112, ../scss/global/_mixins.scss */
+/* line 116, ../scss/global/_mixins.scss */
 .ie-8 .lt-ie9 .view-directory .views-row {
   height: auto;
 }
