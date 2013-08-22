@@ -154,3 +154,33 @@
     font-weight: bold;
   }
 }
+
+//
+// Reusable styles
+//
+
+// Font styles
+.bold {
+  font-weight: bold;
+}
+.italic {
+  font-style: italic;
+}
+
+// Phone number
+.phone-number {
+  font-weight: bold;
+  @include icon-font(phone) {
+    font-weight: normal;
+    padding: 0 0.25em;
+  }
+}
+// Email
+a.email,
+.email a {
+  font-weight: bold;
+  @include icon-font(envelop) {
+    font-weight: normal;
+    padding: 0 0.25em;
+  }
+}
