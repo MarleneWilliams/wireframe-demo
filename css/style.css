@@ -7345,6 +7345,29 @@ input[type="submit"] {
   background-color: #cccccc;
 }
 
+/* line 2, ../scss/components/ct-person/_ct-person-node.scss */
+.node-person .field, .node-person .views-field {
+  line-height: 1.5;
+  margin: 0;
+}
+/* line 6, ../scss/components/ct-person/_ct-person-node.scss */
+.node-person .field-name-body, .node-person .field-type-text-with-summary {
+  clear: both;
+}
+
+/* END: .node-person */
+/* line 11, ../scss/components/ct-person/_ct-person-node.scss */
+.sidebars {
+  /* END: .related-files */
+}
+/* line 13, ../scss/components/ct-person/_ct-person-node.scss */
+.sidebars .related-files ul {
+  display: block;
+  list-style-position: outside;
+  list-style: none;
+  margin: 0;
+}
+
 @media only screen and (min-width: 48em) {
   /* line 1, ../scss/components/page-calendar/_block-calendar-list.scss */
   .block-calendar-list {
@@ -7377,24 +7400,28 @@ input[type="submit"] {
 }
 /* line 5, ../scss/components/page-directory/_view-directory.scss */
 .view-directory .views-field {
-  margin-bottom: .25em;
-  margin-left: 120px;
+  line-height: 1.3;
+  margin: 0 0 0 120px;
 }
-/* line 9, ../scss/components/page-directory/_view-directory.scss */
+/* line 8, ../scss/components/page-directory/_view-directory.scss */
+.view-directory .views-field h4 {
+  margin-bottom: 0;
+}
+/* line 12, ../scss/components/page-directory/_view-directory.scss */
 .view-directory .views-field-field-person-headshot {
   margin: 0;
 }
-/* line 11, ../scss/components/page-directory/_view-directory.scss */
+/* line 14, ../scss/components/page-directory/_view-directory.scss */
 .view-directory .views-field-field-person-headshot img {
   -webkit-transition: background-color 0.25s;
   -moz-transition: background-color 0.25s;
   -o-transition: background-color 0.25s;
   transition: background-color 0.25s;
   background-color: gray;
-  height: 100px;
+  height: 125px;
   margin-bottom: 1em;
   max-width: 100%;
-  width: 100px;
+  width: 126px;
   margin-top: .24em;
 }
 /* line 117, ../scss/global/_mixins.scss */
@@ -7402,7 +7429,7 @@ input[type="submit"] {
   background-color: #8c8c8c;
 }
 @media only screen and (min-width: 48em) {
-  /* line 11, ../scss/components/page-directory/_view-directory.scss */
+  /* line 14, ../scss/components/page-directory/_view-directory.scss */
   .view-directory .views-field-field-person-headshot img {
     margin-top: .74em;
   }
@@ -7425,6 +7452,14 @@ input[type="submit"] {
 /* line 3, ../scss/components/shared/_block-recent-news.scss */
 .view-news .views-field {
   margin-bottom: .5em;
+}
+
+/* line 2, ../scss/components/shared/_block-related-links.scss */
+.related-links ul {
+  display: block;
+  list-style-position: outside;
+  list-style: none;
+  margin: 0;
 }
 
 /* line 1, ../scss/components/shared/_blocks-all.scss */
