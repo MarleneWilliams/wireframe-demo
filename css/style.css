@@ -928,6 +928,11 @@ a.email:before,
   padding: 0 0.25em;
 }
 
+/* line 189, ../scss/global/_extends.scss */
+.list-icon-bullets {
+  list-style: none;
+}
+
 /*! normalize.css v2.1.1 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -7024,7 +7029,7 @@ input[type="submit"] {
   width: 1em;
   margin-bottom: 0;
 }
-/* line 79, ../scss/global/_mixins.scss */
+/* line 116, ../scss/global/_mixins.scss */
 .webform-container-inline .webform-calendar:hover {
   background-color: #8c8c8c;
 }
@@ -7180,7 +7185,7 @@ input[type="submit"] {
   max-width: 100%;
   width: 300px;
 }
-/* line 79, ../scss/global/_mixins.scss */
+/* line 116, ../scss/global/_mixins.scss */
 .node-event .field-name-field-image img:hover {
   background-color: #8c8c8c;
 }
@@ -7201,7 +7206,7 @@ input[type="submit"] {
   max-width: 100%;
   width: 100%;
 }
-/* line 79, ../scss/global/_mixins.scss */
+/* line 116, ../scss/global/_mixins.scss */
 .estimated-cost img:hover {
   background-color: #cccccc;
 }
@@ -7258,7 +7263,7 @@ input[type="submit"] {
   width: 100px;
   margin-top: .24em;
 }
-/* line 79, ../scss/global/_mixins.scss */
+/* line 116, ../scss/global/_mixins.scss */
 .view-directory .views-field-field-person-headshot img:hover {
   background-color: #8c8c8c;
 }
@@ -7390,7 +7395,7 @@ input[type="submit"] {
   width: 500px;
   display: block;
 }
-/* line 79, ../scss/global/_mixins.scss */
+/* line 116, ../scss/global/_mixins.scss */
 .cta-list img:hover {
   background-color: #8c8c8c;
 }
@@ -7412,7 +7417,7 @@ input[type="submit"] {
   max-width: 100%;
   width: 250px;
 }
-/* line 79, ../scss/global/_mixins.scss */
+/* line 116, ../scss/global/_mixins.scss */
 .field img:hover,
 .views-field img:hover {
   background-color: #8c8c8c;
@@ -7825,7 +7830,7 @@ img.placeholder {
   max-width: 100%;
   width: 220px;
 }
-/* line 79, ../scss/global/_mixins.scss */
+/* line 116, ../scss/global/_mixins.scss */
 img.placeholder:hover {
   background-color: #8c8c8c;
 }
@@ -8820,20 +8825,20 @@ html.lt-ie9 #site-name {
     margin-right: 2%;
     width: 49%;
   }
-  /* line 101, ../scss/global/_mixins.scss */
+  /* line 88, ../scss/global/_mixins.scss */
   .view-directory .views-row:nth-child(odd), .view-directory .views-row:nth-child(even) {
     clear: none;
     margin-right: 2%;
   }
-  /* line 107, ../scss/global/_mixins.scss */
+  /* line 94, ../scss/global/_mixins.scss */
   .view-directory .views-row:nth-child(2n+3) {
     clear: left;
   }
-  /* line 111, ../scss/global/_mixins.scss */
+  /* line 98, ../scss/global/_mixins.scss */
   .view-directory .views-row:nth-child(2n+2) {
     margin-right: 0;
   }
-  /* line 116, ../scss/global/_mixins.scss */
+  /* line 103, ../scss/global/_mixins.scss */
   .ie-8 .view-directory .views-row {
     height: auto;
   }
@@ -8846,20 +8851,20 @@ html.lt-ie9 #site-name {
   margin-right: 2%;
   width: 49%;
 }
-/* line 101, ../scss/global/_mixins.scss */
+/* line 88, ../scss/global/_mixins.scss */
 .lt-ie9 .view-directory .views-row:nth-child(odd), .lt-ie9 .view-directory .views-row:nth-child(even) {
   clear: none;
   margin-right: 2%;
 }
-/* line 107, ../scss/global/_mixins.scss */
+/* line 94, ../scss/global/_mixins.scss */
 .lt-ie9 .view-directory .views-row:nth-child(2n+3) {
   clear: left;
 }
-/* line 111, ../scss/global/_mixins.scss */
+/* line 98, ../scss/global/_mixins.scss */
 .lt-ie9 .view-directory .views-row:nth-child(2n+2) {
   margin-right: 0;
 }
-/* line 116, ../scss/global/_mixins.scss */
+/* line 103, ../scss/global/_mixins.scss */
 .ie-8 .lt-ie9 .view-directory .views-row {
   height: auto;
 }
