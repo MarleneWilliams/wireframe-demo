@@ -11,12 +11,12 @@
   }
   .views-field-field-person-headshot {
     margin: 0;
-    img {
-      @include placeholder(100px, 100px);
-      margin-top: .24em;
-      @include respond-to(tablet) {
-        margin-top: .74em;
+      img {
+        @include placeholder(125px, 126px);
+        margin-top: .24em;
+        @include respond-to(tablet) {
+          margin-top: .74em;
+        }
       }
-    }
   }
 }
