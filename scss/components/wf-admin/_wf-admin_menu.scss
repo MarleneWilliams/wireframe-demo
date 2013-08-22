@@ -1,8 +1,26 @@
 .wf-admin-menu {
-  background-color: $gray-lighter;
+  @include transition(opacity .25s, box-shadow .12s);
+  background-color: transparentize($gray-lighter, 0.2);
+  border: 1px solid $gray-light;
+  opacity: 0.4;
+  position: fixed;
+  z-index: 99;
+  &:hover {
+    @include single-box-shadow($gray-dark, 0, 0, 1em, 0, false);
+    opacity: 1;
+  }
+  ul {
+    @extend .inline-list;
+    margin-bottom: 0;
+  }
   li {
     a {
-      @include icon-font(facebook);
+      @include icon-font(home);
+      color: lighten($black, 5%);
+      padding: .5em 1em;
+      text-shadow: 0 0 .5em $white;
+      &:hover {
+      }
     }
   }
 }
