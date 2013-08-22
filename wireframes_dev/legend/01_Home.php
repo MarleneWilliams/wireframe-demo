@@ -18,8 +18,8 @@
  */
 /*
 elms: [
-  {sel:'#masthead',idx:1,
-    notes:'<span class="name">Masthead Region</span>'
+  {sel:'#logo',idx:1,
+    notes:'<span class="name">Logo</span>'
   },
   {sel:'.search-bar', idx:2, styles:{left:'-28px'},
     notes:'<span class="name">Search Bar</span>'

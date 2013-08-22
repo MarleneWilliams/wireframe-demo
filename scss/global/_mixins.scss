@@ -68,19 +68,6 @@
   }
 }
 
-// Placeholder
-@mixin placeholder($height, $width, $bgc: $gray) {
-  @include transition(background-color .25s);
-  background-color: $bgc;
-  height: $height;
-  margin-bottom: 1em;
-  max-width: 100%;
-  width: $width;
-  &:hover {
-    background-color: lighten($bgc, 5%)
-  }
-}
-
 // Making elements align in a grid, regardless of height
 // Apply to elements you want as grid items
 // $cols = how many columns you want
@@ -115,6 +102,19 @@
   // Fix for IE8
   .ie-8 & {
     height: $ie8-height;
+  }
+}
+
+// Placeholder
+@mixin placeholder($height, $width, $bgc: $gray) {
+  @include transition(background-color .25s);
+  background-color: $bgc;
+  height: $height;
+  margin-bottom: 1em;
+  max-width: 100%;
+  width: $width;
+  &:hover {
+    background-color: lighten($bgc, 5%);
   }
 }
 
