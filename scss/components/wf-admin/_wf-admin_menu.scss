@@ -1,0 +1,8 @@
+.wf-admin-menu {
+  background-color: $gray-lighter;
+  li {
+    a {
+      @include icon-font(facebook);
+    }
+  }
+}

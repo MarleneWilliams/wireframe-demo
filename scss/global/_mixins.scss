@@ -80,20 +80,37 @@
 // Making elements align in a grid, regardless of height
 // Apply to elements you want as grid items
 // $cols = how many columns you want
-// $mr = margin-right, should be in percent
-@mixin gridify($cols, $mr: 5%) {
-  $width: (100% / $cols) - $mr + ($mr / $cols);
+// $margin-right = margin-right, should be in percent
+// $ie8-height = an explicit height for all the elements
+@mixin gridify($cols, $margin-right: 5%, $ie8-height: auto) {
+  $width: (100% / $cols) - $margin-right + ($margin-right / $cols);
   $clearnum: $cols + 1;
+
   clear: none;
   display: block;
   float: left;
-  margin-right: $mr;
+  margin-right: $margin-right;
   width: $width;
+
+  // Resetting from any previous uses of this mixin
+  &:nth-child(odd),
+  &:nth-child(even) {
+    clear: none;
+    margin-right: $margin-right;
+  }
+
+  // Clear the rows
   &:nth-child(#{$cols}n+#{$clearnum}) {
     clear: left;
   }
+  // Remove margin-right from last column
   &:nth-child(#{$cols}n+#{$cols}) {
     margin-right: 0;
+  }
+
+  // Fix for IE8
+  .ie-8 & {
+    height: $ie8-height;
   }
 }
 
