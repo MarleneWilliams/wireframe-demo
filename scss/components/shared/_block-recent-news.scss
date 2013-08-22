@@ -3,6 +3,9 @@
   .views-field {
     margin-bottom: .5em;
   }
+  .views-field-body {
+    line-height: 1.3em;
+  }
   .view-footer {
     @extend %read-more;
   }
