@@ -29,7 +29,7 @@ $em-base: 16 !default;
 
 // Grid variables
 
-$row-width: 1000px;
+$row-width: emCalc(1100px);
 // $column-gutter: emCalc(30);
 $total-columns: 12; // Caution: changing this will alter the breakpoints
 
@@ -46,8 +46,8 @@ $content-width:        $full-width - $sidebar-1-width;
 
 // Media Queries
 
-$small-screen: 768px;
-$medium-screen: 1000px;
+$small-screen: emCalc(768px);
+$medium-screen: emCalc(1000px);
 // $large-screen: 1440px;
 
 // $screen: "only screen";

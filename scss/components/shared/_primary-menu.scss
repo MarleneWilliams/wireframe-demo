@@ -1,0 +1,12 @@
+.primary-menu {
+  .last {
+    a, a:not(.button) {
+      background: $gray;
+    }
+    &:hover {
+      a, a:not(.button) {
+        background: $gray-light;
+      }
+    }
+  }
+}

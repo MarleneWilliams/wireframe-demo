@@ -770,52 +770,82 @@
   padding: .25em .5em;
 }
 
-/* line 34, ../scss/global/_extends.scss */
-#block-menu-menu-footer-menu ul li, .section-menu ul li {
-  border-bottom: 1px solid #bfbfbf;
-  margin-bottom: 0;
-}
-/* line 37, ../scss/global/_extends.scss */
-#block-menu-menu-footer-menu ul li.first, .section-menu ul li.first {
-  border-top: 1px solid #bfbfbf;
+/* line 33, ../scss/global/_extends.scss */
+#block-menu-menu-footer-menu ul, .section-menu ul {
+  border-bottom: 1px solid #dbdbdb;
+  margin: 0;
+  padding: 0;
 }
 /* line 40, ../scss/global/_extends.scss */
-#block-menu-menu-footer-menu ul li a, .section-menu ul li a {
-  background-color: #e6e6e6;
-  padding: .5em 1em;
+#block-menu-menu-footer-menu ul li, .section-menu ul li {
+  margin: 0;
+  padding: 0;
 }
-/* line 44, ../scss/global/_extends.scss */
+/* line 43, ../scss/global/_extends.scss */
+#block-menu-menu-footer-menu ul li.first, .section-menu ul li.first {
+  border-top: 1px solid #dbdbdb;
+}
+/* line 46, ../scss/global/_extends.scss */
+#block-menu-menu-footer-menu ul li a, .section-menu ul li a {
+  -webkit-transition: background-color 0.12s;
+  -moz-transition: background-color 0.12s;
+  -o-transition: background-color 0.12s;
+  transition: background-color 0.12s;
+  background-color: #e8e8e8;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 0.5em 1em;
+}
+/* line 52, ../scss/global/_extends.scss */
+#block-menu-menu-footer-menu ul li a:hover, .section-menu ul li a:hover {
+  background-color: #e0e0e0;
+  border-color: #dbdbdb;
+}
+/* line 58, ../scss/global/_extends.scss */
 #block-menu-menu-footer-menu ul li li, .section-menu ul li li {
   border-bottom: 0 none;
-  padding-bottom: .75em;
 }
-/* line 47, ../scss/global/_extends.scss */
+/* line 62, ../scss/global/_extends.scss */
 #block-menu-menu-footer-menu ul li li.first, .section-menu ul li li.first {
   border-top: 0 none;
 }
-/* line 50, ../scss/global/_extends.scss */
+/* line 65, ../scss/global/_extends.scss */
 #block-menu-menu-footer-menu ul li li a, .section-menu ul li li a {
-  background-color: transparent;
-  padding: 0;
+  background-color: whitesmoke;
+  border-top: 1px solid whitesmoke;
+  border-bottom: 1px solid whitesmoke;
+  padding: 0.5em 1em;
 }
-/* line 55, ../scss/global/_extends.scss */
-#block-menu-menu-footer-menu ul li ul, .section-menu ul li ul {
+/* line 70, ../scss/global/_extends.scss */
+#block-menu-menu-footer-menu ul li li a:hover, .section-menu ul li li a:hover {
+  background-color: #ededed;
+  border-color: #e8e8e8;
+}
+/* line 76, ../scss/global/_extends.scss */
+#block-menu-menu-footer-menu ul li li ul, .section-menu ul li li ul {
+  border-bottom: 1px solid #f0f0f0;
+}
+/* line 80, ../scss/global/_extends.scss */
+#block-menu-menu-footer-menu ul li li ul a, .section-menu ul li li ul a {
+  background-color: #fafafa;
+  border-top: 1px solid #fafafa;
+  border-bottom: 1px solid #fafafa;
+  padding: 0.5em 0 0.5em 2.5em;
+}
+/* line 85, ../scss/global/_extends.scss */
+#block-menu-menu-footer-menu ul li li ul a:hover, .section-menu ul li li ul a:hover {
   background-color: #f2f2f2;
-  padding: 1em;
-}
-/* line 58, ../scss/global/_extends.scss */
-#block-menu-menu-footer-menu ul li ul ul, .section-menu ul li ul ul {
-  background-color: transparent;
+  border-color: #f0f0f0;
 }
 
-/* line 66, ../scss/global/_extends.scss */
+/* line 96, ../scss/global/_extends.scss */
 .node-event .field-name-field-image, .field img,
 .views-field img {
   float: left;
   margin: 0 1em 1em 0;
 }
 
-/* line 76, ../scss/global/_extends.scss */
+/* line 106, ../scss/global/_extends.scss */
 #block-menu-menu-social-links ul.menu li a {
   height: 1.5em;
   padding: 0;
@@ -824,40 +854,40 @@
   width: 1.25em;
 }
 
-/* line 95, ../scss/global/_extends.scss */
+/* line 125, ../scss/global/_extends.scss */
 #block-view-upcoming-events .view-footer, .view-news .view-footer {
   text-align: right;
 }
 
-/* line 100, ../scss/global/_extends.scss */
+/* line 130, ../scss/global/_extends.scss */
 .field,
 .views-field {
   margin-bottom: 1em;
 }
-/* line 102, ../scss/global/_extends.scss */
+/* line 132, ../scss/global/_extends.scss */
 .field .label,
 .views-field .label {
   font-weight: bold;
 }
 
-/* line 109, ../scss/global/_extends.scss */
+/* line 139, ../scss/global/_extends.scss */
 .view-news .views-row {
   margin-bottom: 1em;
 }
-/* line 112, ../scss/global/_extends.scss */
+/* line 142, ../scss/global/_extends.scss */
 .view-news h3 {
   font-size: 1.125em;
 }
-/* line 115, ../scss/global/_extends.scss */
+/* line 145, ../scss/global/_extends.scss */
 .view-news h3.field-content {
   margin-bottom: 0;
 }
-/* line 120, ../scss/global/_extends.scss */
+/* line 150, ../scss/global/_extends.scss */
 .view-news .views-field-field-news-date,
 .view-news .views-field-body {
   font-size: 80%;
 }
-/* line 123, ../scss/global/_extends.scss */
+/* line 153, ../scss/global/_extends.scss */
 .view-news .views-field-field-news-date {
   font-weight: bold;
 }
@@ -1409,7 +1439,7 @@ select {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 1000px;
+  max-width: 68.75em;
   *zoom: 1;
 }
 /* line 121, ../../../../../Users/marlene/.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
@@ -1643,7 +1673,7 @@ select {
   }
 }
 /* Styles for screens that are atleast 768px; */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* line 156, ../../../../../Users/marlene/.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.3.1/scss/foundation/components/_grid.scss */
   .large-1 {
     position: relative;
@@ -2033,7 +2063,7 @@ th.hide-for-xlarge {
 }
 
 /* Medium Displays: 768px - 1279px */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* line 85, ../../../../../Users/marlene/.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.3.1/scss/foundation/components/_visibility.scss */
   .show-for-medium,
   .show-for-medium-up {
@@ -2086,7 +2116,7 @@ th.hide-for-xlarge {
   }
 }
 /* Large Displays: 1280px - 1440px */
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 62.5em) {
   /* line 126, ../../../../../Users/marlene/.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.3.1/scss/foundation/components/_visibility.scss */
   .show-for-large,
   .show-for-large-up {
@@ -2594,7 +2624,7 @@ th.hide-for-touch {
   }
 }
 /* Foundation Block Grids for above small breakpoint */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* Remove small grid clearing */
   /* line 63, ../../../../../Users/marlene/.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
   .small-block-grid-1 > li:nth-of-type(1n+1) {
@@ -3128,7 +3158,7 @@ blockquote p {
   padding: 0 0.0625em;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* line 366, ../../../../../Users/marlene/.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.3.1/scss/foundation/components/_type.scss */
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.4;
@@ -3781,7 +3811,7 @@ input.large[type="submit"] {
     border-radius: 1000px;
   }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* line 223, ../../../../../Users/marlene/.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.3.1/scss/foundation/components/_buttons.scss */
   button, .button, button,
   html input[type="button"],
@@ -5004,7 +5034,7 @@ form.custom .custom.disabled {
   border-bottom: 0;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* line 319, ../../../../../Users/marlene/.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.3.1/scss/foundation/components/_section.scss */
   [data-section=''], [data-section='auto'], .section-container.auto {
     width: 100%;
@@ -5875,7 +5905,7 @@ html .top-bar input[type="button"],
 
 /* line 353, ../../../../../Users/marlene/.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.3.1/scss/foundation/components/_top-bar.scss */
 .top-bar-js-breakpoint {
-  width: 768px !important;
+  width: 48em !important;
   visibility: hidden;
 }
 
@@ -5884,7 +5914,7 @@ html .top-bar input[type="button"],
   display: block;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* line 362, ../../../../../Users/marlene/.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.3.1/scss/foundation/components/_top-bar.scss */
   .top-bar {
     background: #111111;
@@ -5934,7 +5964,7 @@ html .top-bar input[type="button"],
 
   /* line 385, ../../../../../Users/marlene/.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.3.1/scss/foundation/components/_top-bar.scss */
   .contain-to-grid .top-bar {
-    max-width: 1000px;
+    max-width: 68.75em;
     margin: 0 auto;
     margin-bottom: 1.875em;
   }
@@ -6377,7 +6407,7 @@ html .top-bar input[type="button"],
   display: none;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* line 303, ../../../../../Users/marlene/.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.3.1/scss/foundation/components/_orbit.scss */
   .touch .orbit-container .orbit-prev,
   .touch .orbit-container .orbit-next {
@@ -6388,7 +6418,7 @@ html .top-bar input[type="button"],
     display: block;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 48em) {
   /* line 316, ../../../../../Users/marlene/.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.3.1/scss/foundation/components/_orbit.scss */
   .orbit-stack-on-small .orbit-slides-container {
     height: auto !important;
@@ -6515,7 +6545,7 @@ html .top-bar input[type="button"],
   display: block;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* line 123, ../../../../../Users/marlene/.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.3.1/scss/foundation/components/_clearing.scss */
   .clearing-main-prev,
   .clearing-main-next {
@@ -7005,7 +7035,7 @@ input[type="submit"] {
   clear: both;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* line 1, ../scss/components/page-calendar/_block-calendar-list.scss */
   .block-calendar-list {
     display: none;
@@ -7020,7 +7050,7 @@ input[type="submit"] {
 .block-calendar {
   display: none;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* line 1, ../scss/components/page-calendar/_block-calendar.scss */
   .block-calendar {
     display: block;
@@ -7053,7 +7083,7 @@ input[type="submit"] {
   width: 100px;
   margin-top: .24em;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* line 11, ../scss/components/page-directory/_view-directory.scss */
   .view-directory .views-field-field-person-headshot img {
     margin-top: .74em;
@@ -7068,7 +7098,7 @@ input[type="submit"] {
 .block-title {
   font-size: 1.6875em;
   line-height: 1;
-  margin: 0;
+  margin: 0 0 .5em 0;
 }
 
 /* line 7, ../scss/components/shared/_blocks-all.scss */
@@ -7501,31 +7531,40 @@ html[xmlns] .slides {
 #block-menu-menu-footer-menu ul li {
   margin-bottom: 0;
 }
-@media only screen and (min-width: 768px) {
-  /* line 18, ../scss/components/shared/_footer-menu.scss */
+@media only screen and (min-width: 48em) {
+  /* line 17, ../scss/components/shared/_footer-menu.scss */
+  #block-menu-menu-footer-menu ul {
+    border-bottom: 0 none;
+  }
+  /* line 19, ../scss/components/shared/_footer-menu.scss */
   #block-menu-menu-footer-menu ul li {
     border-bottom: 0 none;
   }
-  /* line 21, ../scss/components/shared/_footer-menu.scss */
+  /* line 22, ../scss/components/shared/_footer-menu.scss */
   #block-menu-menu-footer-menu ul li.first {
     border-top: 0 none;
   }
 }
-/* line 18, ../scss/components/shared/_footer-menu.scss */
+/* line 17, ../scss/components/shared/_footer-menu.scss */
+.lt-ie9 #block-menu-menu-footer-menu ul {
+  border-bottom: 0 none;
+}
+/* line 19, ../scss/components/shared/_footer-menu.scss */
 .lt-ie9 #block-menu-menu-footer-menu ul li {
   border-bottom: 0 none;
 }
-/* line 21, ../scss/components/shared/_footer-menu.scss */
+/* line 22, ../scss/components/shared/_footer-menu.scss */
 .lt-ie9 #block-menu-menu-footer-menu ul li.first {
   border-top: 0 none;
 }
 
 /* line 1, ../scss/components/shared/_footer-text.scss */
 #block-block-1 {
+  color: gray;
   font-size: 80%;
   text-align: center;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* line 1, ../scss/components/shared/_footer-text.scss */
   #block-block-1 {
     text-align: right;
@@ -7567,12 +7606,25 @@ img.placeholder {
   width: 220px;
 }
 
+/* line 3, ../scss/components/shared/_primary-menu.scss */
+.primary-menu .last a, .primary-menu .last a:not(.button) {
+  background: gray;
+}
+/* line 7, ../scss/components/shared/_primary-menu.scss */
+.primary-menu .last:hover a, .primary-menu .last:hover a:not(.button) {
+  background: #bfbfbf;
+}
+
 /* line 3, ../scss/components/shared/_search-box.scss */
 .block-search label {
   display: none;
 }
 
-/* line 5, ../scss/components/shared/_section-menu.scss */
+/* line 2, ../scss/components/shared/_section-menu.scss */
+.section-menu ul {
+  padding: 0;
+}
+/* line 6, ../scss/components/shared/_section-menu.scss */
 .section-menu ul li {
   margin-bottom: 0;
 }
@@ -7717,7 +7769,7 @@ img.placeholder {
   width: 100%;
   float: left;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* line 9, ../scss/layout/_content_layout.scss */
   .layout-default #content, .layout-flex-sidebar #content {
     position: relative;
@@ -7743,7 +7795,7 @@ img.placeholder {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 1000px;
+  max-width: 68.75em;
   *zoom: 1;
 }
 /* line 121, ../../../../../Users/marlene/.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
@@ -7763,7 +7815,7 @@ img.placeholder {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 1000px;
+  max-width: 68.75em;
   *zoom: 1;
   position: relative;
 }
@@ -7776,7 +7828,7 @@ img.placeholder {
 #header:after {
   clear: both;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* line 4, ../scss/layout/_header_layout.scss */
   #header .inner {
     padding-top: 3em;
@@ -7794,7 +7846,7 @@ img.placeholder {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 1000px;
+  max-width: 68.75em;
   *zoom: 1;
 }
 /* line 121, ../../../../../Users/marlene/.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
@@ -7837,7 +7889,7 @@ img.placeholder {
   width: 100%;
   float: left;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* line 22, ../scss/layout/_rows-cols_layout.scss */
   .layout-flex-sidebar .col1, .layout-flex-nosidebar .col1, .layout-flex-sidebar
   .col2, .layout-flex-nosidebar
@@ -7870,7 +7922,7 @@ img.placeholder {
   width: 100%;
   float: left;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* line 34, ../scss/layout/_rows-cols_layout.scss */
   .layout-landing .col1, .layout-landing
   .col2, .layout-landing
@@ -7901,7 +7953,7 @@ img.placeholder {
   width: 100%;
   float: left;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* line 1, ../scss/layout/_sidebar_layout.scss */
   .sidebar {
     position: relative;
@@ -7928,7 +7980,7 @@ img.placeholder {
   width: 100%;
   float: left;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* line 4, ../scss/layout/footer-blocks/_footer-menu_layout.scss */
   #block-menu-menu-footer-menu ul {
     display: block;
@@ -8084,7 +8136,7 @@ img.placeholder {
 .lt-ie9 #block-menu-menu-footer-menu ul ul li {
   padding: 0;
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 62.5em) {
   /* line 16, ../scss/layout/footer-blocks/_footer-menu_layout.scss */
   #block-menu-menu-footer-menu ul {
     display: block;
@@ -8249,7 +8301,7 @@ html.lt-ie9 #block-menu-menu-footer-menu ul ul li {
   width: 100%;
   float: left;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* line 1, ../scss/layout/footer-blocks/_footer-text_layout.scss */
   #block-block-1 {
     position: relative;
@@ -8276,7 +8328,7 @@ html.lt-ie9 #block-menu-menu-footer-menu ul ul li {
   width: 100%;
   float: left;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* line 1, ../scss/layout/footer-blocks/_social-links_layout.scss */
   #block-menu-menu-social-links {
     position: relative;
@@ -8344,7 +8396,7 @@ html.lt-ie9 #block-menu-menu-footer-menu ul ul li {
   float: left;
   text-align: center;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* line 1, ../scss/layout/header-blocks/_logo_layout.scss */
   .logo-link {
     position: relative;
@@ -8375,7 +8427,7 @@ html.lt-ie9 #block-menu-menu-footer-menu ul ul li {
   width: 100%;
   float: left;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* line 1, ../scss/layout/header-blocks/_menu-audience_layout.scss */
   #block-menu-menu-audience-menu {
     position: absolute;
@@ -8440,6 +8492,24 @@ html.lt-ie9 #block-menu-menu-footer-menu ul ul li {
   width: 100%;
   float: left;
 }
+@media only screen and (min-width: 48em) {
+  /* line 4, ../scss/layout/header-blocks/_primary-menu_layout.scss */
+  .primary-menu .title-area {
+    display: none;
+  }
+  /* line 8, ../scss/layout/header-blocks/_primary-menu_layout.scss */
+  .primary-menu .top-bar-section ul {
+    margin-bottom: 1.875em;
+  }
+}
+/* line 4, ../scss/layout/header-blocks/_primary-menu_layout.scss */
+.lt-ie9 .primary-menu .title-area {
+  display: none;
+}
+/* line 8, ../scss/layout/header-blocks/_primary-menu_layout.scss */
+.lt-ie9 .primary-menu .top-bar-section ul {
+  margin-bottom: 1.875em;
+}
 
 /* line 1, ../scss/layout/header-blocks/_site-name_layout.scss */
 #site-name {
@@ -8450,7 +8520,7 @@ html.lt-ie9 #block-menu-menu-footer-menu ul ul li {
   float: left;
   text-align: center;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* line 1, ../scss/layout/header-blocks/_site-name_layout.scss */
   #site-name {
     position: relative;
@@ -8480,7 +8550,7 @@ html.lt-ie9 #block-menu-menu-footer-menu ul ul li {
   line-height: 1;
   margin-top: 0;
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 62.5em) {
   /* line 1, ../scss/layout/header-blocks/_site-name_layout.scss */
   #site-name {
     position: relative;
@@ -8506,7 +8576,7 @@ html.lt-ie9 #site-name {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 1000px;
+  max-width: 68.75em;
   *zoom: 1;
   background-color: #f2f2f2;
   padding-top: .75em;
@@ -8528,7 +8598,7 @@ html.lt-ie9 #site-name {
   width: 100%;
   float: left;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* line 8, ../scss/layout/page-directory/_views-directory_layout.scss */
   .view-directory .views-exposed-widget {
     position: relative;
@@ -8555,7 +8625,7 @@ html.lt-ie9 #site-name {
 .view-directory .views-reset-button {
   width: auto;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* line 21, ../scss/layout/page-directory/_views-directory_layout.scss */
   .view-directory .views-row {
     clear: none;
@@ -8625,7 +8695,7 @@ html.lt-ie9 #site-name {
   float: left;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* line 12, ../scss/layout/shared/_search-box_layout.scss */
   #header .block-search {
     position: relative;
@@ -8645,7 +8715,7 @@ html.lt-ie9 #site-name {
   float: left;
   clear: none;
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 62.5em) {
   /* line 12, ../scss/layout/shared/_search-box_layout.scss */
   #header .block-search {
     position: relative;

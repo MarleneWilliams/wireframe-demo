@@ -15,6 +15,7 @@
   }
   @include respond-to(tablet) {
     ul {
+      border-bottom: 0 none;
       li {
         // @include padded-box-remove;
         border-bottom: 0 none;

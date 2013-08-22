@@ -30,33 +30,63 @@
 }
 
 // Sidebar menu
-%sidebar-menu {  
+%sidebar-menu {
+  $bgc: lighten($gray-light, 16%);
+  $border-color: darken($bgc, 5%);
+  border-bottom: 1px solid $border-color;
+  margin: 0;
+  padding: 0;
+  // First level
   li {
-    border-bottom: 1px solid $gray-light;
-    margin-bottom: 0;
+    margin: 0;
+    padding: 0;
     &.first {
-      border-top: 1px solid $gray-light;
+      border-top: 1px solid $border-color;
     }
     a {
-      background-color: $gray-lighter;
-      padding: .5em 1em;
+      @include transition(background-color .12s);
+      background-color: $bgc;
+      border-top: 1px solid $bgc;
+      border-bottom: 1px solid $bgc;
+      padding: .5em emCalc(16px);
+      &:hover {
+        background-color: darken($bgc, 3%);
+        border-color: $border-color;
+      }
     }
+    // Second level
     li {
+      $bgc: lighten($bgc, 5%);
+      $border-color: darken($bgc, 5%);
       border-bottom: 0 none;
-      padding-bottom: .75em;
       &.first {
         border-top: 0 none;
       }
       a {
-        background-color: transparent;
-        padding: 0;
+        background-color: $bgc;
+        border-top: 1px solid $bgc;
+        border-bottom: 1px solid $bgc;
+        padding: emCalc(8px) emCalc(16px);
+        &:hover {
+          background-color: darken($bgc, 3%);
+          border-color: $border-color;
+        }
       }
-    }
-    ul {
-      background-color: lighten($gray-lighter, 5%);
-      padding: 1em;
+      // Third level
       ul {
-        background-color: transparent;
+        $bgc: lighten($bgc, 2%);
+        $border-color: darken($bgc, 4%);
+        border-bottom: 1px solid $border-color;
+        a {
+          background-color: $bgc;
+          border-top: 1px solid $bgc;
+          border-bottom: 1px solid $bgc;
+          padding: emCalc(8px) 0 emCalc(8px) emCalc(40px);
+          &:hover {
+            background-color: darken($bgc, 3%);
+            border-color: $border-color;
+          }
+        }
       }
     }
   }
