@@ -8,6 +8,7 @@ end
  * Font Custom: Scss
  */
 
+// Set up the font / font-face rules
 @font-face {
   font-family: "<%= @opts[:font_name] %>";
   src: url("<%= file_name %>.eot");
@@ -19,26 +20,70 @@ end
   font-style: normal;
 }
 
-<%= @data[:glyphs].map {|name| ".#{@opts[:css_prefix] + name}:before"}.join(",\n") %> {
-  font-family: "<%= @opts[:font_name] %>";
-  font-style: normal;
+// Declare Sass variables
+$iconfont-name: "<%= @opts[:font_name] %>";
+
+// Placeholder selector to manage font family rules / shared styles
+%icon-shared-styles {
+  font-family: $iconfont-name;
   font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  padding-right: .5em;
+  font-style: normal;
+  display: inline-block;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
-  display: inline-block;
   text-decoration: inherit;
 }
-<% @data[:glyphs].each_with_index do |name, index| %>
-.<%= @opts[:css_prefix] + name %>:before { content: "\<%= (61696+index).to_s(16) %>"; }<% end %>
+// Placeholder for icons in :before
+%icon-before-styles {
+  padding-right: .5em;
+}
+// Placeholder for icons in :after
+%icon-after-styles {
+  padding-left: .5em;
+}
 
-$iconfont: "<%= @opts[:font_name] %>";
-
-@mixin icon-font($font-name) {
-  @extend .icon-#{$font-name};
-  &:before {
-    @content;
+// Mixin for semantically adding icons
+@mixin icon-font($icon-name, $position: before) {
+  @if $position {
+    @extend %icon-#{$icon-name}-#{$position};
+    &:#{$position} {
+      @content;
+    }
+  } @else {
+    @extend .icon-#{$icon-name};
+    &:#{$position} {
+      @content;
+    }
   }
 }
+
+
+//
+// To make all of these silent selctors, change the "." to "%" in the string ".#{@opts[:css_prefix]"
+// E.g. "%#{@opts[:css_prefix]" To save your sanity, you'll probably want to do this in the template...
+//
+
+// Create the classes for the default and "before" icons
+<%= @data[:glyphs].map {|name| ".#{@opts[:css_prefix] + name}"}.join(",\n") %>,
+<%= @data[:glyphs].map {|name| "%#{@opts[:css_prefix] + name}-before"}.join(",\n") %> {
+  &:before {
+    @extend %icon-shared-styles;
+    @extend %icon-before-styles;
+  }
+}
+// Create the classes for the "after" icons
+<%= @data[:glyphs].map {|name| "%#{@opts[:css_prefix] + name}-after"}.join(",\n") %> {
+  &:after {
+    @extend %icon-shared-styles;
+    @extend %icon-after-styles;
+  }
+}
+// Put the correct content into either "before" or "after"
+<% @data[:glyphs].each_with_index do |name, index| %>
+.<%= @opts[:css_prefix] + name %>,
+%<%= @opts[:css_prefix] + name %>-before {
+  &:before { content: "\<%= (61696+index).to_s(16) %>"; }
+}
+%<%= @opts[:css_prefix] + name %>-after {
+  &:after { content: "\<%= (61696+index).to_s(16) %>"; }
+}<% end %>
