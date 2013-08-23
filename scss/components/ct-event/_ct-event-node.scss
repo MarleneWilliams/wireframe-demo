@@ -2,10 +2,15 @@
   .field-name-field-image {
     @extend %float-left;
     img {
-      @include placeholder(250px, 300px);
+      @include placeholder(250px, 450px);
     }
   }
   .field-name-body {
     clear: both;
+    margin: 1em 0;
+  }
+  .field {
+    margin-bottom: 0;
+    line-height: 1.5;
   }
 }
