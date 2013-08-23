@@ -7317,7 +7317,7 @@ input[type="submit"] {
   height: 250px;
   margin-bottom: 1em;
   max-width: 100%;
-  width: 300px;
+  width: 450px;
 }
 /* line 116, ../scss/global/_mixins.scss */
 .node-event .field-name-field-image img:hover {
@@ -7326,6 +7326,12 @@ input[type="submit"] {
 /* line 8, ../scss/components/ct-event/_ct-event-node.scss */
 .node-event .field-name-body {
   clear: both;
+  margin: 1em 0;
+}
+/* line 12, ../scss/components/ct-event/_ct-event-node.scss */
+.node-event .field {
+  margin-bottom: 0;
+  line-height: 1.5;
 }
 
 /* line 2, ../scss/components/ct-flexpage/_estimated-cost.scss */
@@ -7374,18 +7380,6 @@ input[type="submit"] {
 }
 
 /* END: .node-person */
-/* line 11, ../scss/components/ct-person/_ct-person-node.scss */
-.sidebars {
-  /* END: .related-files */
-}
-/* line 13, ../scss/components/ct-person/_ct-person-node.scss */
-.sidebars .related-files ul {
-  display: block;
-  list-style-position: outside;
-  list-style: none;
-  margin: 0;
-}
-
 @media only screen and (min-width: 48em) {
   /* line 1, ../scss/components/page-calendar/_block-calendar-list.scss */
   .block-calendar-list {
@@ -7476,6 +7470,15 @@ input[type="submit"] {
   line-height: 1.3em;
 }
 
+/* line 2, ../scss/components/shared/_block-related-files.scss */
+.related-files ul {
+  display: block;
+  list-style-position: outside;
+  list-style: none;
+  margin: 0;
+}
+
+/* END: .related-files */
 /* line 2, ../scss/components/shared/_block-related-links.scss */
 .related-links ul {
   display: block;
