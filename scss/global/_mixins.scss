@@ -112,9 +112,39 @@
   height: $height;
   margin-bottom: 1em;
   max-width: 100%;
+  // position: relative;
   width: $width;
   &:hover {
     background-color: lighten($bgc, 5%);
+  }
+}
+
+// Icon bullets
+@mixin icon-bullets($icon, $icon-color: $body-font-color) {
+  @extend .no-bullet;
+  li {
+    @include icon-font($icon) {
+      color: $icon-color;
+      @content;
+    }
+  }
+}
+
+//
+// Experimental stuff
+//
+
+// Experimental - Icon as a background
+@mixin icon-bg($icon, $font-size: 5em, $color: $gray-lighter, $top: emCalc(12px), $left: emCalc(12px)) {
+  position: relative;
+  @include icon-font($icon) {
+    color: $color;
+    font-size: $font-size;
+    left: $left;
+    position: absolute;
+    top: $top;
+    z-index: -1;
+    @content;
   }
 }
 

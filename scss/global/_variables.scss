@@ -77,6 +77,13 @@ $gray:         darken($white, 50%);
 $gray-dark:    darken($white, 75%);
 $black:      #000000;
 
+// Foundation colors
+
+$primary-color: #2ba6cb; // This is also the link color
+// $secondary-color: #e9e9e9;
+// $alert-color: #c60f13;
+// $success-color: #5da423;
+
 
 //
 // Typography
@@ -101,3 +108,32 @@ $list-side-margin: emCalc(20);
 // $definition-list-header-weight: bold;
 // $definition-list-header-margin-bottom: .3em;
 // $definition-list-margin-bottom: emCalc(12);
+
+
+// Various global styles
+
+$default-float: left;
+
+// $body-bg: #fff;
+$body-font-color: #222;
+// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+// $body-font-weight: normal;
+// $body-font-style: normal;
+
+// Font-smoothing
+// $font-smoothing: antialiased;
+
+// Text direction settings
+// $text-direction: ltr;
+
+
+// Make sure border radius matches unless we want it different.
+
+// $global-radius: 3px;
+// $global-rounded: 1000px;
+
+// Inset shadow shiny edges and depressions.
+
+// $shiny-edge-size: 0 1px 0;
+// $shiny-edge-color: rgba(#fff, .5);
+// $shiny-edge-active-color: rgba(#000, .2);
