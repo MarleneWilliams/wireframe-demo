@@ -3232,7 +3232,7 @@ ul.disc {
   list-style-type: disc;
 }
 /* line 273, ../../../../../usr/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.1/scss/foundation/components/_type.scss */
-ul.no-bullet {
+ul.no-bullet, .related-files ul, .related-links ul {
   list-style: none;
 }
 
@@ -7472,19 +7472,13 @@ input[type="submit"] {
 
 /* line 2, ../scss/components/shared/_block-related-files.scss */
 .related-files ul {
-  display: block;
   list-style-position: outside;
-  list-style: none;
-  margin: 0;
 }
 
 /* END: .related-files */
 /* line 2, ../scss/components/shared/_block-related-links.scss */
 .related-links ul {
-  display: block;
   list-style-position: outside;
-  list-style: none;
-  margin: 0;
 }
 
 /* line 1, ../scss/components/shared/_blocks-all.scss */
