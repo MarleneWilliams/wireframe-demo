@@ -1062,11 +1062,6 @@ a.email:before,
   padding: 0 0.25em;
 }
 
-/* line 189, ../scss/global/_extends.scss */
-.list-icon-bullets {
-  list-style: none;
-}
-
 /*! normalize.css v2.1.1 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
