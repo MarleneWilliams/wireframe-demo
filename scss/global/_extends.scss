@@ -184,3 +184,9 @@ a.email,
     padding: 0 0.25em;
   }
 }
+
+%no-bullet,
+.no-bullet {
+  @extend .no-bullet;
+  margin: 0;
+}

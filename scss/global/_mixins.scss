@@ -120,11 +120,13 @@
 }
 
 // Icon bullets
-@mixin icon-bullets($icon, $icon-color: $body-font-color) {
+@mixin icon-bullets($icon, $selector: li, $icon-color: false) {
   @extend .no-bullet;
-  li {
+  #{$selector} {
     @include icon-font($icon) {
-      color: $icon-color;
+      @if $icon-color {
+        color: $icon-color;
+      }
       @content;
     }
   }

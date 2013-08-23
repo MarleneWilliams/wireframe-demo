@@ -1,49 +1,49 @@
-
-.meta-overlay-toggle {
-
+.wf-admin-menu {
+  .meta-overlay-toggle {
+    @include single-box-shadow(none);
+    background-color: $primary-color;
+    font-size: .75em;
+    padding: .5em .75em;
+    position: absolute;
+    top: 3.75em;
+  }
 }
-.meta-overlay {
-
+body {
+  .legend-overlay-notes {
+    background-color: $gray-lighter;
+    padding: 1em 0;
+    display: none;
+    dl {
+      padding-top: 1em;
+    }
+    dt, dd {
+      float: left;
+    }
+    dt {
+      width: 3em;
+      clear: left;
+    }
+  }
 }
+
 .meta-overlay-hide {
 
 }
 
 #navigation-utility .meta-overlay {
-  top: -4px;
-  left: 0;
+  // top: -4px;
+  // left: 0;
 }
 
 @media only screen and (min-width:768px)  {
-  .meta-overlay-show {
-    display: inline-block;
-  }
-  .legend-overlay-notes.meta-overlay-show {
-    display: block;
-  }
-  .meta-overlay-toggle {
-    display: block;
-  }
+  // .meta-overlay-show {
+  //   display: inline-block;
+  // }
+  // .legend-overlay-notes.meta-overlay-show {
+  //   display: block;
+  // }
+  // .meta-overlay-toggle {
+  //   display: block;
+  // }
 }
-
-.events-list .meta-overlay {
-  display: none;
-}
-
-.legend-overlay-notes {
-  padding-top: 10px;
-  display: none;
-  background-color:#faa;
-  dl {
-    padding-top: 10px;
-  }
-  dt, dd {
-    float: left;
-  }
-  dt {
-    width: 30px;
-    clear: left;
-  }
-}
-
 

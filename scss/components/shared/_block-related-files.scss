@@ -1,6 +1,6 @@
 .related-files {
   ul {
     @extend .no-bullet;
-	list-style-position: outside;
+    @include icon-bullets(file, a);
   }
 } /* END: .related-files */

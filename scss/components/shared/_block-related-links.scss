@@ -1,6 +1,5 @@
 .related-links {
   ul {
-    @extend .no-bullet;
-	list-style-position: outside;
+    @extend %no-bullet;
   }
 }
