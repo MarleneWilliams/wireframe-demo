@@ -1,8 +1,6 @@
 .related-links {
   ul {
-    display: block;
-    list-style-position: outside;
-    list-style: none;
-    margin: 0;
+    @extend .no-bullet;
+	list-style-position: outside;
   }
 }
