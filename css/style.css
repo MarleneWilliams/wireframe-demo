@@ -980,7 +980,7 @@ a.email:before,
 }
 
 /* line 96, ../scss/global/_extends.scss */
-.node-event .field-name-field-image, .node-news .field-name-field-image, .field img,
+.node-event .field-name-field-image, .field img,
 .views-field img {
   float: left;
   margin: 0 1em 1em 0;
@@ -7459,16 +7459,6 @@ input[type="submit"] {
   margin-top: .74em;
 }
 
-/* line 6, ../scss/components/regions/_rows-cols.scss */
-.row1,
-.row2,
-.row3,
-.col1,
-.col2,
-.col3 {
-  margin-bottom: 2em;
-}
-
 /* line 3, ../scss/components/shared/_block-recent-news.scss */
 .view-news .views-field {
   margin-bottom: .5em;
@@ -8102,25 +8092,33 @@ img.placeholder:hover {
   position: absolute;
   top: 3.75em;
 }
+/* line 9, ../scss/components/wf-admin/_legend_overlay.scss */
+.wf-admin-menu .meta-overlay-toggle:hover {
+  cursor: pointer;
+}
 
-/* line 12, ../scss/components/wf-admin/_legend_overlay.scss */
+/* line 15, ../scss/components/wf-admin/_legend_overlay.scss */
 body .legend-overlay-notes {
   background-color: #e6e6e6;
   padding: 1em 0;
   display: none;
 }
-/* line 16, ../scss/components/wf-admin/_legend_overlay.scss */
+/* line 19, ../scss/components/wf-admin/_legend_overlay.scss */
 body .legend-overlay-notes dl {
   padding-top: 1em;
 }
-/* line 19, ../scss/components/wf-admin/_legend_overlay.scss */
+/* line 22, ../scss/components/wf-admin/_legend_overlay.scss */
 body .legend-overlay-notes dt, body .legend-overlay-notes dd {
   float: left;
 }
-/* line 22, ../scss/components/wf-admin/_legend_overlay.scss */
+/* line 25, ../scss/components/wf-admin/_legend_overlay.scss */
 body .legend-overlay-notes dt {
-  width: 3em;
   clear: left;
+  width: 5%;
+}
+/* line 29, ../scss/components/wf-admin/_legend_overlay.scss */
+body .legend-overlay-notes dd {
+  width: 95%;
 }
 
 /* line 1, ../scss/components/wf-admin/_wf-admin_menu.scss */
@@ -8259,8 +8257,8 @@ body .legend-overlay-notes dt {
   clear: both;
 }
 
-/* line 9, ../scss/layout/_rows-cols_layout.scss */
-.layout-landing .row2, .layout-flex-sidebar .row2, .layout-flex-nosidebar .row2 {
+/* line 6, ../scss/layout/_rows-cols_layout.scss */
+.row1 {
   width: auto;
   margin-left: -0.9375em;
   margin-right: -0.9375em;
@@ -8270,19 +8268,97 @@ body .legend-overlay-notes dt {
   *zoom: 1;
 }
 /* line 121, ../../../../../Users/marlene/.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
-.layout-landing .row2:before, .layout-landing .row2:after, .layout-flex-sidebar .row2:before, .layout-flex-sidebar .row2:after, .layout-flex-nosidebar .row2:before, .layout-flex-nosidebar .row2:after {
+.row1:before, .row1:after {
   content: " ";
   display: table;
 }
 /* line 122, ../../../../../Users/marlene/.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
-.layout-landing .row2:after, .layout-flex-sidebar .row2:after, .layout-flex-nosidebar .row2:after {
+.row1:after {
   clear: both;
 }
 
-/* line 22, ../scss/layout/_rows-cols_layout.scss */
-.layout-flex-sidebar .col1, .layout-flex-nosidebar .col1, .layout-flex-sidebar
-.col2, .layout-flex-nosidebar
-.col2 {
+/* line 6, ../scss/layout/_rows-cols_layout.scss */
+.row2 {
+  width: auto;
+  margin-left: -0.9375em;
+  margin-right: -0.9375em;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: none;
+  *zoom: 1;
+}
+/* line 121, ../../../../../Users/marlene/.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
+.row2:before, .row2:after {
+  content: " ";
+  display: table;
+}
+/* line 122, ../../../../../Users/marlene/.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
+.row2:after {
+  clear: both;
+}
+
+/* line 6, ../scss/layout/_rows-cols_layout.scss */
+.row3 {
+  width: auto;
+  margin-left: -0.9375em;
+  margin-right: -0.9375em;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: none;
+  *zoom: 1;
+}
+/* line 121, ../../../../../Users/marlene/.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
+.row3:before, .row3:after {
+  content: " ";
+  display: table;
+}
+/* line 122, ../../../../../Users/marlene/.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
+.row3:after {
+  clear: both;
+}
+
+/* line 6, ../scss/layout/_rows-cols_layout.scss */
+.row4 {
+  width: auto;
+  margin-left: -0.9375em;
+  margin-right: -0.9375em;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: none;
+  *zoom: 1;
+}
+/* line 121, ../../../../../Users/marlene/.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
+.row4:before, .row4:after {
+  content: " ";
+  display: table;
+}
+/* line 122, ../../../../../Users/marlene/.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
+.row4:after {
+  clear: both;
+}
+
+/* line 6, ../scss/layout/_rows-cols_layout.scss */
+.row5 {
+  width: auto;
+  margin-left: -0.9375em;
+  margin-right: -0.9375em;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: none;
+  *zoom: 1;
+}
+/* line 121, ../../../../../Users/marlene/.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
+.row5:before, .row5:after {
+  content: " ";
+  display: table;
+}
+/* line 122, ../../../../../Users/marlene/.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
+.row5:after {
+  clear: both;
+}
+
+/* line 26, ../scss/layout/_rows-cols_layout.scss */
+.columns-1 .col {
   position: relative;
   padding-left: 0.9375em;
   padding-right: 0.9375em;
@@ -8290,10 +8366,35 @@ body .legend-overlay-notes dt {
   float: left;
 }
 @media only screen and (min-width: 48em) {
-  /* line 22, ../scss/layout/_rows-cols_layout.scss */
-  .layout-flex-sidebar .col1, .layout-flex-nosidebar .col1, .layout-flex-sidebar
-  .col2, .layout-flex-nosidebar
-  .col2 {
+  /* line 26, ../scss/layout/_rows-cols_layout.scss */
+  .columns-1 .col {
+    position: relative;
+    padding-left: 0.9375em;
+    padding-right: 0.9375em;
+    width: 100%;
+    float: left;
+  }
+}
+/* line 13, ../scss/global/_mixins.scss */
+.lt-ie9 .columns-1 .col {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 100%;
+  float: left;
+}
+
+/* line 26, ../scss/layout/_rows-cols_layout.scss */
+.columns-2 .col {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 100%;
+  float: left;
+}
+@media only screen and (min-width: 48em) {
+  /* line 26, ../scss/layout/_rows-cols_layout.scss */
+  .columns-2 .col {
     position: relative;
     padding-left: 0.9375em;
     padding-right: 0.9375em;
@@ -8302,9 +8403,7 @@ body .legend-overlay-notes dt {
   }
 }
 /* line 13, ../scss/global/_mixins.scss */
-.lt-ie9 .layout-flex-sidebar .col1, .lt-ie9 .layout-flex-nosidebar .col1, .lt-ie9 .layout-flex-sidebar
-.col2, .lt-ie9 .layout-flex-nosidebar
-.col2 {
+.lt-ie9 .columns-2 .col {
   position: relative;
   padding-left: 0.9375em;
   padding-right: 0.9375em;
@@ -8312,10 +8411,8 @@ body .legend-overlay-notes dt {
   float: left;
 }
 
-/* line 34, ../scss/layout/_rows-cols_layout.scss */
-.layout-landing .col1, .layout-landing
-.col2, .layout-landing
-.col3 {
+/* line 26, ../scss/layout/_rows-cols_layout.scss */
+.columns-3 .col {
   position: relative;
   padding-left: 0.9375em;
   padding-right: 0.9375em;
@@ -8323,10 +8420,8 @@ body .legend-overlay-notes dt {
   float: left;
 }
 @media only screen and (min-width: 48em) {
-  /* line 34, ../scss/layout/_rows-cols_layout.scss */
-  .layout-landing .col1, .layout-landing
-  .col2, .layout-landing
-  .col3 {
+  /* line 26, ../scss/layout/_rows-cols_layout.scss */
+  .columns-3 .col {
     position: relative;
     padding-left: 0.9375em;
     padding-right: 0.9375em;
@@ -8335,9 +8430,7 @@ body .legend-overlay-notes dt {
   }
 }
 /* line 13, ../scss/global/_mixins.scss */
-.lt-ie9 .layout-landing .col1, .lt-ie9 .layout-landing
-.col2, .lt-ie9 .layout-landing
-.col3 {
+.lt-ie9 .columns-3 .col {
   position: relative;
   padding-left: 0.9375em;
   padding-right: 0.9375em;

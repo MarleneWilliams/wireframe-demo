@@ -6,6 +6,9 @@
     padding: .5em .75em;
     position: absolute;
     top: 3.75em;
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 body {
@@ -20,8 +23,11 @@ body {
       float: left;
     }
     dt {
-      width: 3em;
       clear: left;
+      width: 5%;
+    }
+    dd {
+      width: 95%;
     }
   }
 }

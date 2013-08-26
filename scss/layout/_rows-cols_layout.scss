@@ -2,39 +2,33 @@
 // Rows
 //
 
-// Row 2
-.row2 {
-  .layout-landing &,
-  .layout-flex-sidebar &,
-  .layout-flex-nosidebar & {
+@for $i from 1 through 5 {
+  .row#{$i} {
     @include grid-row(nest);
   }
 }
+// // Row 2
+// .row2 {
+//   .layout-landing &,
+//   .layout-flex-sidebar &,
+//   .layout-flex-nosidebar & {
+//   }
+// }
 
 //
 // Columns
 //
 
-// Two-column rows
-.col1,
-.col2 {
-  .layout-flex-sidebar &,
-  .layout-flex-nosidebar & {
-    @include grid-column($full-width);
-    @include respond-to(tablet) {
-      @include grid-column(6);
-    }
-  }
-}
+// @include grid-column($columns, $last-column, $center, $offset, $push, $pull, $collapse, $float);
 
-// Three-column rows
-.col1,
-.col2,
-.col3 {
-  .layout-landing & {
+// Layout logic for cols 1-4
+@for $i from 1 through 3 {
+  .columns-#{$i} .col {
+    // Full width for mobile
     @include grid-column($full-width);
     @include respond-to(tablet) {
-      @include grid-column(4);
+      // Full width divided by column number for desktop
+      @include grid-column($full-width / $i);
     }
   }
 }
