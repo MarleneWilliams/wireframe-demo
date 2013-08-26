@@ -6,7 +6,13 @@ elms: [
   {sel:'.views-exposed-form', idx:2,
     notes:'<span class="name">Search/filter the events on the calendar based on audienc or event type</span>'
   },
-  {sel:'.fc-button-today', idx:3,
-    notes:'<span class="name">Click on this to return you to the current date</span>'
+  {sel:'.previous-arrow', idx:3,
+    notes:'<span class="name">Page to previous months</span>'
+  },
+  {sel:'.next-arrow', idx:4,
+    notes:'<span class="name">Page to future months</span>'
+  },
+  {sel:'.fc-event-title', idx:5,
+    notes:'<span class="name">Clicking on an event title will take visitors to its event page.</span>'
   }
 ]
