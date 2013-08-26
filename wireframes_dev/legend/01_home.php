@@ -12,11 +12,14 @@ elms: [
   {sel:'.primary-menu', idx:4, parentStyles:{overflow:'visible'},
     notes:'<span class="name">The main, topical navigation menu for the site. All pages should have a spot in here.</span>'
   },
-  {sel:'#slider', idx:5,
-    notes:'<span class="name">Slideshow, which can contain announcements, information and calls to action. Slides can contain text in addition to the images.</span>'
+  {sel:'.prospective-students', idx:5.1,
+    notes:'<span class="name">Calls to action targeted at prospective students.</span>'
   },
-  {sel:'.cta-item', idx:6,
-    notes:'<span class="name">Calls to action - Images with optional text directing visitors to highlighted areas of the site.</span>'
+  {sel:'.current-students', idx:5.2,
+    notes:'<span class="name">Calls to action targeted at current students.</span>'
+  },
+  {sel:'.row2 .cta-list', idx:6,
+    notes:'<span class="name">Calls to action - Images with optional text directing visitors to additional highlighted areas of the site.</span>'
   },
   {sel:'#block-view-upcoming-events', idx:7,
     notes:'<span class="name">Upcoming events list, linking to individual event pages as well as a link to the full calendar.</span>'

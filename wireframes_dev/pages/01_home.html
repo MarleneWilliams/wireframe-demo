@@ -7,18 +7,23 @@
     <div id="content" role="content">
       <a id="main-content"></a>
 
-      <div class="row1">
-        {{components/shared/slideshow}}
+      <div class="row1 columns-2">
+        <div class="col col1">
+          {{components/page-home/cta-prospective-students}}
+        </div>
+        <div class="col col2">
+          {{components/page-home/cta-current-students}}
+        </div>
       </div>
 
-      <div class="row2">
-        <div class="col1">
+      <div class="row2 columns-3">
+        <div class="col col1">
           {{components/shared/cta/cta-list-3}}
         </div>
-        <div class="col2">
+        <div class="col col2">
           {{components/shared/block-upcoming-events}}
         </div>
-        <div class="col3">
+        <div class="col col3">
           {{components/shared/block-recent-news}}
         </div>
       </div>
