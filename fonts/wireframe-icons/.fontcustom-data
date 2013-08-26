@@ -1,17 +1,25 @@
 {
   "fonts": [
-    "wireframe-icons_7c6511135df0b5d6c8420ee6e164317e.ttf",
-    "wireframe-icons_7c6511135df0b5d6c8420ee6e164317e.woff",
-    "wireframe-icons_7c6511135df0b5d6c8420ee6e164317e.eot",
-    "wireframe-icons_7c6511135df0b5d6c8420ee6e164317e.svg"
+    "wireframe-icons_1c7c1e7f222c6b51a12e4ce501c44c30.ttf",
+    "wireframe-icons_1c7c1e7f222c6b51a12e4ce501c44c30.woff",
+    "wireframe-icons_1c7c1e7f222c6b51a12e4ce501c44c30.eot",
+    "wireframe-icons_1c7c1e7f222c6b51a12e4ce501c44c30.svg"
   ],
   "templates": [
     "_wireframe-icons.scss",
     "wireframe-icons-preview.html"
   ],
-  "file_name": "wireframe-icons_7c6511135df0b5d6c8420ee6e164317e",
+  "file_name": "wireframe-icons_1c7c1e7f222c6b51a12e4ce501c44c30",
   "glyphs": [
     "address-book",
+    "arrow-left-alt1",
+    "arrow-left",
+    "arrow-left2",
+    "arrow-left3",
+    "arrow-right-alt1",
+    "arrow-right",
+    "arrow-right2",
+    "arrow-right3",
     "backward",
     "backward2",
     "bell",
