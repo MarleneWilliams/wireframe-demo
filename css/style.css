@@ -7266,6 +7266,10 @@ input[type="submit"] {
 .webform-container-inline .webform-calendar:hover {
   background-color: #8c8c8c;
 }
+/* line 133, ../scss/global/_mixins.scss */
+.webform-container-inline .webform-calendar img {
+  display: none;
+}
 
 /* line 65, ../scss/base/html/_forms.scss */
 .views-exposed-form {
@@ -7358,6 +7362,10 @@ input[type="submit"] {
 .node-event .field-name-field-image img:hover {
   background-color: #8c8c8c;
 }
+/* line 133, ../scss/global/_mixins.scss */
+.node-event .field-name-field-image img img {
+  display: none;
+}
 /* line 8, ../scss/components/ct-event/_ct-event-node.scss */
 .node-event .field-name-body {
   clear: both;
@@ -7385,6 +7393,10 @@ input[type="submit"] {
 .estimated-cost img:hover {
   background-color: #cccccc;
 }
+/* line 133, ../scss/global/_mixins.scss */
+.estimated-cost img img {
+  display: none;
+}
 
 /* line 4, ../scss/components/ct-news/_ct-news-node.scss */
 .node-news .field-name-field-image img {
@@ -7402,6 +7414,10 @@ input[type="submit"] {
 /* line 127, ../scss/global/_mixins.scss */
 .node-news .field-name-field-image img:hover {
   background-color: #8c8c8c;
+}
+/* line 133, ../scss/global/_mixins.scss */
+.node-news .field-name-field-image img img {
+  display: none;
 }
 
 /* line 2, ../scss/components/ct-person/_ct-person-node.scss */
@@ -7478,6 +7494,10 @@ input[type="submit"] {
 /* line 127, ../scss/global/_mixins.scss */
 .view-directory .views-field-field-person-headshot img:hover {
   background-color: #8c8c8c;
+}
+/* line 133, ../scss/global/_mixins.scss */
+.view-directory .views-field-field-person-headshot img img {
+  display: none;
 }
 @media only screen and (min-width: 48em) {
   /* line 14, ../scss/components/page-directory/_view-directory.scss */
@@ -7668,8 +7688,9 @@ input[type="submit"] {
   margin: 0;
 }
 
-/* line 2, ../scss/components/shared/_cta.scss */
-.cta-list img {
+/* line 3, ../scss/components/shared/_cta.scss */
+.cta-list img,
+.cta-list-notext img {
   -webkit-transition: background-color 0.25s;
   -moz-transition: background-color 0.25s;
   -o-transition: background-color 0.25s;
@@ -7682,11 +7703,23 @@ input[type="submit"] {
   display: block;
 }
 /* line 127, ../scss/global/_mixins.scss */
-.cta-list img:hover {
+.cta-list img:hover,
+.cta-list-notext img:hover {
   background-color: #8c8c8c;
 }
-/* line 9, ../scss/components/shared/_cta.scss */
-.cta-list .cta-item {
+/* line 133, ../scss/global/_mixins.scss */
+.cta-list img img,
+.cta-list-notext img img {
+  display: none;
+}
+/* line 10, ../scss/components/shared/_cta.scss */
+.cta-list .cta-item,
+.cta-list-notext .cta-item {
+  margin-bottom: 1em;
+}
+
+/* line 26, ../scss/components/shared/_cta.scss */
+.cta-list-notext .cta-item {
   margin-bottom: 1em;
 }
 
@@ -7707,6 +7740,11 @@ input[type="submit"] {
 .field img:hover,
 .views-field img:hover {
   background-color: #8c8c8c;
+}
+/* line 133, ../scss/global/_mixins.scss */
+.field img img,
+.views-field img img {
+  display: none;
 }
 
 /*
@@ -8128,6 +8166,10 @@ img.placeholder {
 /* line 127, ../scss/global/_mixins.scss */
 img.placeholder:hover {
   background-color: #8c8c8c;
+}
+/* line 133, ../scss/global/_mixins.scss */
+img.placeholder img {
+  display: none;
 }
 
 /* line 2, ../scss/components/shared/_primary-menu.scss */

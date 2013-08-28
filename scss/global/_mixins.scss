@@ -127,6 +127,12 @@
   &:hover {
     background-color: lighten($bgc, 5%);
   }
+  &:before {
+
+  }
+  img {
+    display: none;
+  }
 }
 
 // Icon bullets
@@ -153,7 +159,8 @@
     color: $color;
     font-size: $font-size;
     left: $left;
-    position: absolute;
+    // position: absolute;
+    text-align: center;
     top: $top;
     z-index: -1;
     @content;
