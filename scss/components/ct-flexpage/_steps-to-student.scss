@@ -1,0 +1,5 @@
+.steps-to-student {
+  ul {
+    @include icon-bullets(arrow-right2, a);
+  }
+}
