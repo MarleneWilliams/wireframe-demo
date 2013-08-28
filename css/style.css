@@ -139,6 +139,7 @@
 .icon-wrench:before,
 .icon-youtube:before,
 .block-calendar .previous-arrow a:before,
+.steps-to-student ul a:before,
 a.email:before,
 .email a:before,
 #block-menu-menu-social-links .facebook:before,
@@ -147,7 +148,13 @@ a.email:before,
 .phone-number:before,
 #block-menu-menu-social-links .twitter:before,
 #block-menu-menu-social-links .youtube:before,
-.block-calendar .next-arrow a:after {
+.block-calendar .next-arrow a:after,
+.view-news .view-footer a:after,
+#block-view-upcoming-events .view-footer a:after,
+a .view-news .view-footer:after,
+.view-news a .view-footer:after,
+a #block-view-upcoming-events .view-footer:after,
+#block-view-upcoming-events a .view-footer:after {
   font-family: "wireframe-icons";
   font-weight: normal;
   font-style: normal;
@@ -287,6 +294,7 @@ a.email:before,
 .icon-wrench:before,
 .icon-youtube:before,
 .block-calendar .previous-arrow a:before,
+.steps-to-student ul a:before,
 a.email:before,
 .email a:before,
 #block-menu-menu-social-links .facebook:before,
@@ -299,7 +307,13 @@ a.email:before,
 }
 
 /* line 35, ../fonts/wireframe-icons/_wireframe-icons.scss */
-.block-calendar .next-arrow a:after {
+.block-calendar .next-arrow a:after,
+.view-news .view-footer a:after,
+#block-view-upcoming-events .view-footer a:after,
+a .view-news .view-footer:after,
+.view-news a .view-footer:after,
+a #block-view-upcoming-events .view-footer:after,
+#block-view-upcoming-events a .view-footer:after {
   padding-left: .5em;
 }
 
@@ -345,7 +359,8 @@ a.email:before,
 }
 
 /* line 509, ../fonts/wireframe-icons/_wireframe-icons.scss */
-.icon-arrow-right2:before {
+.icon-arrow-right2:before,
+.steps-to-student ul a:before {
   content: "\f107";
 }
 
@@ -745,6 +760,11 @@ a.email:before,
   content: "\f155";
 }
 
+/* line 1058, ../fonts/wireframe-icons/_wireframe-icons.scss */
+.view-news .view-footer a:after, #block-view-upcoming-events .view-footer a:after, a .view-news .view-footer:after, .view-news a .view-footer:after, a #block-view-upcoming-events .view-footer:after, #block-view-upcoming-events a .view-footer:after {
+  content: "\f155";
+}
+
 /* line 1062, ../fonts/wireframe-icons/_wireframe-icons.scss */
 .icon-plus:before {
   content: "\f156";
@@ -1065,55 +1085,55 @@ a.email:before,
   width: 1.25em;
 }
 
-/* line 125, ../scss/global/_extends.scss */
-#block-view-upcoming-events .view-footer, .view-news .view-footer {
+/* line 117, ../scss/global/_extends.scss */
+.view-news .view-footer, #block-view-upcoming-events .view-footer {
   text-align: right;
 }
 
-/* line 130, ../scss/global/_extends.scss */
+/* line 125, ../scss/global/_extends.scss */
 .field,
 .views-field {
   margin-bottom: 1em;
 }
-/* line 132, ../scss/global/_extends.scss */
+/* line 127, ../scss/global/_extends.scss */
 .field .label,
 .views-field .label {
   font-weight: bold;
 }
 
-/* line 139, ../scss/global/_extends.scss */
+/* line 134, ../scss/global/_extends.scss */
 .view-news .views-row {
   margin-bottom: 1em;
 }
-/* line 142, ../scss/global/_extends.scss */
+/* line 137, ../scss/global/_extends.scss */
 .view-news h3 {
   font-size: 1.125em;
 }
-/* line 145, ../scss/global/_extends.scss */
+/* line 140, ../scss/global/_extends.scss */
 .view-news h3.field-content {
   margin-bottom: 0;
 }
-/* line 150, ../scss/global/_extends.scss */
+/* line 145, ../scss/global/_extends.scss */
 .view-news .views-field-field-news-date,
 .view-news .views-field-body {
   font-size: 80%;
 }
-/* line 153, ../scss/global/_extends.scss */
+/* line 148, ../scss/global/_extends.scss */
 .view-news .views-field-field-news-date {
   font-weight: bold;
 }
 
-/* line 163, ../scss/global/_extends.scss */
+/* line 158, ../scss/global/_extends.scss */
 .bold {
   font-weight: bold;
 }
 
-/* line 166, ../scss/global/_extends.scss */
+/* line 161, ../scss/global/_extends.scss */
 .italic {
   font-style: italic;
 }
 
-/* line 171, ../scss/global/_extends.scss */
+/* line 166, ../scss/global/_extends.scss */
 .phone-number {
   font-weight: bold;
 }
@@ -1123,7 +1143,7 @@ a.email:before,
   padding: 0 0.25em;
 }
 
-/* line 180, ../scss/global/_extends.scss */
+/* line 175, ../scss/global/_extends.scss */
 a.email,
 .email a {
   font-weight: bold;
@@ -1135,11 +1155,12 @@ a.email:before,
   padding: 0 0.25em;
 }
 
-/* line 189, ../scss/global/_extends.scss */
+/* line 184, ../scss/global/_extends.scss */
 .related-links ul,
 .related-links ul,
 .no-bullet,
-.related-files ul {
+.related-files ul,
+.steps-to-student ul {
   margin: 0;
 }
 
@@ -2423,7 +2444,7 @@ th.hide-for-xlarge {
   }
 }
 /* X-Large Displays: 1400px and up */
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 90em) {
   /* line 173, ../../../../../Users/marlene/.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.3.1/scss/foundation/components/_visibility.scss */
   .show-for-xlarge {
     display: inherit !important;
@@ -3310,7 +3331,7 @@ ul.disc {
 /* line 273, ../../../../../Users/marlene/.rvm/gems/ruby-1.9.3-p448/gems/zurb-foundation-4.3.1/scss/foundation/components/_type.scss */
 .related-links ul,
 ul.no-bullet,
-.related-files ul {
+.related-files ul, .steps-to-student ul {
   list-style: none;
 }
 
@@ -7241,7 +7262,7 @@ input[type="submit"] {
   width: 1em;
   margin-bottom: 0;
 }
-/* line 117, ../scss/global/_mixins.scss */
+/* line 127, ../scss/global/_mixins.scss */
 .webform-container-inline .webform-calendar:hover {
   background-color: #8c8c8c;
 }
@@ -7321,70 +7342,6 @@ input[type="submit"] {
   padding-bottom: 2em;
 }
 
-/* line 2, ../scss/components/ct-event/_block-upcoming-events.scss */
-#block-view-upcoming-events .content {
-  padding: .5em 0;
-}
-/* line 5, ../scss/components/ct-event/_block-upcoming-events.scss */
-#block-view-upcoming-events .views-row {
-  clear: both;
-  margin-bottom: .5em;
-}
-/* line 9, ../scss/components/ct-event/_block-upcoming-events.scss */
-#block-view-upcoming-events .views-field {
-  margin-bottom: 0;
-}
-/* line 12, ../scss/components/ct-event/_block-upcoming-events.scss */
-#block-view-upcoming-events .views-field-title {
-  font-size: 1em;
-  font-weight: bold;
-}
-/* line 15, ../scss/components/ct-event/_block-upcoming-events.scss */
-#block-view-upcoming-events .views-field-title h3 {
-  font-size: 1em;
-}
-/* line 21, ../scss/components/ct-event/_block-upcoming-events.scss */
-#block-view-upcoming-events .views-field-nothing {
-  display: block;
-  float: left;
-  max-width: 6em;
-  padding-bottom: 3em;
-  padding-top: .2em;
-  padding-left: 0;
-  width: 30%;
-}
-/* line 29, ../scss/components/ct-event/_block-upcoming-events.scss */
-#block-view-upcoming-events .views-field-nothing .event-calendar-date {
-  display: block;
-  font-weight: normal;
-  text-align: center;
-}
-/* line 33, ../scss/components/ct-event/_block-upcoming-events.scss */
-#block-view-upcoming-events .views-field-nothing .event-calendar-date a, #block-view-upcoming-events .views-field-nothing .event-calendar-date a:link, #block-view-upcoming-events .views-field-nothing .event-calendar-date a:visited, #block-view-upcoming-events .views-field-nothing .event-calendar-date a:hover, #block-view-upcoming-events .views-field-nothing .event-calendar-date a:active, #block-view-upcoming-events .views-field-nothing .event-calendar-date a:focus {
-  border-bottom: 0 none;
-  font-weight: normal;
-}
-/* line 37, ../scss/components/ct-event/_block-upcoming-events.scss */
-#block-view-upcoming-events .views-field-nothing .event-calendar-date .event-month {
-  font-size: 1.25em;
-  display: block;
-  line-height: 1;
-  text-transform: uppercase;
-}
-/* line 44, ../scss/components/ct-event/_block-upcoming-events.scss */
-#block-view-upcoming-events .views-field-nothing .event-calendar-date .event-day {
-  display: block;
-  font-size: 2.25em;
-  line-height: 1em;
-  padding: 0 0 .25em 0;
-}
-/* line 53, ../scss/components/ct-event/_block-upcoming-events.scss */
-#block-view-upcoming-events .views-field-field-event-liblocation {
-  font-size: .9em;
-  font-style: italic;
-  padding: .5em 0;
-}
-
 /* line 4, ../scss/components/ct-event/_ct-event-node.scss */
 .node-event .field-name-field-image img {
   -webkit-transition: background-color 0.25s;
@@ -7397,7 +7354,7 @@ input[type="submit"] {
   max-width: 100%;
   width: 450px;
 }
-/* line 117, ../scss/global/_mixins.scss */
+/* line 127, ../scss/global/_mixins.scss */
 .node-event .field-name-field-image img:hover {
   background-color: #8c8c8c;
 }
@@ -7424,7 +7381,7 @@ input[type="submit"] {
   max-width: 100%;
   width: 100%;
 }
-/* line 117, ../scss/global/_mixins.scss */
+/* line 127, ../scss/global/_mixins.scss */
 .estimated-cost img:hover {
   background-color: #cccccc;
 }
@@ -7442,7 +7399,7 @@ input[type="submit"] {
   width: 795px;
   margin: 0;
 }
-/* line 117, ../scss/global/_mixins.scss */
+/* line 127, ../scss/global/_mixins.scss */
 .node-news .field-name-field-image img:hover {
   background-color: #8c8c8c;
 }
@@ -7518,7 +7475,7 @@ input[type="submit"] {
   width: 126px;
   margin-top: .24em;
 }
-/* line 117, ../scss/global/_mixins.scss */
+/* line 127, ../scss/global/_mixins.scss */
 .view-directory .views-field-field-person-headshot img:hover {
   background-color: #8c8c8c;
 }
@@ -7533,6 +7490,18 @@ input[type="submit"] {
   margin-top: .74em;
 }
 
+/* line 3, ../scss/components/page-home/_cta-current-students.scss */
+.current-students .cta-item img {
+  height: 120px;
+  width: 100%;
+}
+
+/* line 3, ../scss/components/page-home/_cta-prospective-students.scss */
+.prospective-students .cta-item img {
+  height: 120px;
+  width: 100%;
+}
+
 /* line 3, ../scss/components/shared/_block-recent-news.scss */
 .view-news .views-field {
   margin-bottom: .5em;
@@ -7543,6 +7512,73 @@ input[type="submit"] {
 }
 
 /* END: .related-files */
+/* line 2, ../scss/components/shared/_block-upcoming-events.scss */
+#block-view-upcoming-events .content {
+  padding: .5em 0;
+}
+/* line 5, ../scss/components/shared/_block-upcoming-events.scss */
+#block-view-upcoming-events .views-row {
+  clear: both;
+  margin-bottom: .5em;
+}
+/* line 9, ../scss/components/shared/_block-upcoming-events.scss */
+#block-view-upcoming-events .views-field {
+  margin-bottom: 0;
+  margin-left: 4em;
+}
+/* line 13, ../scss/components/shared/_block-upcoming-events.scss */
+#block-view-upcoming-events .views-field-title {
+  font-size: 1em;
+  font-weight: bold;
+}
+/* line 16, ../scss/components/shared/_block-upcoming-events.scss */
+#block-view-upcoming-events .views-field-title h3 {
+  font-size: 1em;
+}
+/* line 23, ../scss/components/shared/_block-upcoming-events.scss */
+#block-view-upcoming-events .views-field-nothing {
+  display: block;
+  float: left;
+  margin-left: 0;
+  padding-top: .2em;
+  padding-left: 0;
+  width: 3em;
+}
+/* line 30, ../scss/components/shared/_block-upcoming-events.scss */
+#block-view-upcoming-events .views-field-nothing .event-calendar-date {
+  display: block;
+  font-weight: normal;
+  text-align: center;
+}
+/* line 34, ../scss/components/shared/_block-upcoming-events.scss */
+#block-view-upcoming-events .views-field-nothing .event-calendar-date a, #block-view-upcoming-events .views-field-nothing .event-calendar-date a:link, #block-view-upcoming-events .views-field-nothing .event-calendar-date a:visited, #block-view-upcoming-events .views-field-nothing .event-calendar-date a:hover, #block-view-upcoming-events .views-field-nothing .event-calendar-date a:active, #block-view-upcoming-events .views-field-nothing .event-calendar-date a:focus {
+  border-bottom: 0 none;
+  font-weight: normal;
+}
+/* line 38, ../scss/components/shared/_block-upcoming-events.scss */
+#block-view-upcoming-events .views-field-nothing .event-calendar-date .event-month {
+  font-size: 1.25em;
+  display: block;
+  line-height: 1;
+  text-transform: uppercase;
+}
+/* line 45, ../scss/components/shared/_block-upcoming-events.scss */
+#block-view-upcoming-events .views-field-nothing .event-calendar-date .event-day {
+  display: block;
+  font-size: 2.25em;
+  line-height: 1em;
+  padding: 0 0 .25em 0;
+}
+/* line 54, ../scss/components/shared/_block-upcoming-events.scss */
+#block-view-upcoming-events .views-field-field-event-liblocation {
+  font-style: italic;
+  padding: .5em 0;
+}
+/* line 57, ../scss/components/shared/_block-upcoming-events.scss */
+#block-view-upcoming-events .views-field-field-event-liblocation .field-content {
+  font-size: .9em;
+}
+
 /* line 1, ../scss/components/shared/_blocks-all.scss */
 .block-title {
   font-size: 1.6875em;
@@ -7645,7 +7681,7 @@ input[type="submit"] {
   width: 500px;
   display: block;
 }
-/* line 117, ../scss/global/_mixins.scss */
+/* line 127, ../scss/global/_mixins.scss */
 .cta-list img:hover {
   background-color: #8c8c8c;
 }
@@ -7667,7 +7703,7 @@ input[type="submit"] {
   max-width: 100%;
   width: 250px;
 }
-/* line 117, ../scss/global/_mixins.scss */
+/* line 127, ../scss/global/_mixins.scss */
 .field img:hover,
 .views-field img:hover {
   background-color: #8c8c8c;
@@ -8046,6 +8082,15 @@ html[xmlns] .slides {
   text-align: right;
 }
 
+/* line 4, ../scss/components/shared/_menu-audience.scss */
+#block-menu-menu-audience-menu .menu > li {
+  margin-left: 1em;
+}
+/* line 7, ../scss/components/shared/_menu-audience.scss */
+#block-menu-menu-audience-menu .menu > li.last a {
+  padding-right: 0;
+}
+
 /* line 1, ../scss/components/shared/_placeholder.scss */
 .placeholder {
   position: relative;
@@ -8080,18 +8125,41 @@ img.placeholder {
   max-width: 100%;
   width: 220px;
 }
-/* line 117, ../scss/global/_mixins.scss */
+/* line 127, ../scss/global/_mixins.scss */
 img.placeholder:hover {
   background-color: #8c8c8c;
 }
 
-/* line 3, ../scss/components/shared/_primary-menu.scss */
+/* line 2, ../scss/components/shared/_primary-menu.scss */
+.primary-menu .dropdown {
+  -webkit-transition: visibility 0.1s;
+  -moz-transition: visibility 0.1s;
+  -o-transition: visibility 0.1s;
+  transition: visibility 0.1s;
+}
+/* line 6, ../scss/components/shared/_primary-menu.scss */
 .primary-menu .last a, .primary-menu .last a:not(.button) {
+  -webkit-transition: background 0.25s;
+  -moz-transition: background 0.25s;
+  -o-transition: background 0.25s;
+  transition: background 0.25s;
   background: gray;
 }
-/* line 7, ../scss/components/shared/_primary-menu.scss */
+/* line 11, ../scss/components/shared/_primary-menu.scss */
 .primary-menu .last:hover a, .primary-menu .last:hover a:not(.button) {
   background: #bfbfbf;
+}
+@media only screen and (min-width: 48em) {
+  /* line 16, ../scss/components/shared/_primary-menu.scss */
+  .primary-menu .dropdown {
+    background-color: #111111;
+    padding-bottom: .5em;
+  }
+}
+/* line 13, ../scss/global/_mixins.scss */
+.lt-ie9 .primary-menu .dropdown {
+  background-color: #111111;
+  padding-bottom: .5em;
 }
 
 /* line 3, ../scss/components/shared/_search-box.scss */
@@ -8431,7 +8499,7 @@ body .legend-overlay-notes dd {
   clear: both;
 }
 
-/* line 26, ../scss/layout/_rows-cols_layout.scss */
+/* line 20, ../scss/layout/_rows-cols_layout.scss */
 .columns-1 .col {
   position: relative;
   padding-left: 0.9375em;
@@ -8440,7 +8508,7 @@ body .legend-overlay-notes dd {
   float: left;
 }
 @media only screen and (min-width: 48em) {
-  /* line 26, ../scss/layout/_rows-cols_layout.scss */
+  /* line 20, ../scss/layout/_rows-cols_layout.scss */
   .columns-1 .col {
     position: relative;
     padding-left: 0.9375em;
@@ -8458,7 +8526,7 @@ body .legend-overlay-notes dd {
   float: left;
 }
 
-/* line 26, ../scss/layout/_rows-cols_layout.scss */
+/* line 20, ../scss/layout/_rows-cols_layout.scss */
 .columns-2 .col {
   position: relative;
   padding-left: 0.9375em;
@@ -8467,7 +8535,7 @@ body .legend-overlay-notes dd {
   float: left;
 }
 @media only screen and (min-width: 48em) {
-  /* line 26, ../scss/layout/_rows-cols_layout.scss */
+  /* line 20, ../scss/layout/_rows-cols_layout.scss */
   .columns-2 .col {
     position: relative;
     padding-left: 0.9375em;
@@ -8485,7 +8553,7 @@ body .legend-overlay-notes dd {
   float: left;
 }
 
-/* line 26, ../scss/layout/_rows-cols_layout.scss */
+/* line 20, ../scss/layout/_rows-cols_layout.scss */
 .columns-3 .col {
   position: relative;
   padding-left: 0.9375em;
@@ -8494,7 +8562,7 @@ body .legend-overlay-notes dd {
   float: left;
 }
 @media only screen and (min-width: 48em) {
-  /* line 26, ../scss/layout/_rows-cols_layout.scss */
+  /* line 20, ../scss/layout/_rows-cols_layout.scss */
   .columns-3 .col {
     position: relative;
     padding-left: 0.9375em;
@@ -9163,20 +9231,20 @@ html.lt-ie9 #site-name {
     margin-right: 2%;
     width: 49%;
   }
-  /* line 88, ../scss/global/_mixins.scss */
+  /* line 98, ../scss/global/_mixins.scss */
   .view-directory .views-row:nth-child(odd), .view-directory .views-row:nth-child(even) {
     clear: none;
     margin-right: 2%;
   }
-  /* line 94, ../scss/global/_mixins.scss */
+  /* line 104, ../scss/global/_mixins.scss */
   .view-directory .views-row:nth-child(2n+3) {
     clear: left;
   }
-  /* line 98, ../scss/global/_mixins.scss */
+  /* line 108, ../scss/global/_mixins.scss */
   .view-directory .views-row:nth-child(2n+2) {
     margin-right: 0;
   }
-  /* line 103, ../scss/global/_mixins.scss */
+  /* line 113, ../scss/global/_mixins.scss */
   .ie-8 .view-directory .views-row {
     height: auto;
   }
@@ -9189,39 +9257,40 @@ html.lt-ie9 #site-name {
   margin-right: 2%;
   width: 49%;
 }
-/* line 88, ../scss/global/_mixins.scss */
+/* line 98, ../scss/global/_mixins.scss */
 .lt-ie9 .view-directory .views-row:nth-child(odd), .lt-ie9 .view-directory .views-row:nth-child(even) {
   clear: none;
   margin-right: 2%;
 }
-/* line 94, ../scss/global/_mixins.scss */
+/* line 104, ../scss/global/_mixins.scss */
 .lt-ie9 .view-directory .views-row:nth-child(2n+3) {
   clear: left;
 }
-/* line 98, ../scss/global/_mixins.scss */
+/* line 108, ../scss/global/_mixins.scss */
 .lt-ie9 .view-directory .views-row:nth-child(2n+2) {
   margin-right: 0;
 }
-/* line 103, ../scss/global/_mixins.scss */
+/* line 113, ../scss/global/_mixins.scss */
 .ie-8 .lt-ie9 .view-directory .views-row {
   height: auto;
 }
 
-/* line 3, ../scss/layout/shared/_search-box_layout.scss */
+/* line 2, ../scss/layout/shared/_search-box_layout.scss */
 .block-search .form-type-textfield {
   position: relative;
   padding-left: 0.9375em;
   padding-right: 0.9375em;
-  width: 66.66667%;
+  width: 75%;
   float: left;
 }
-/* line 6, ../scss/layout/shared/_search-box_layout.scss */
+/* line 5, ../scss/layout/shared/_search-box_layout.scss */
 .block-search .form-actions {
   position: relative;
-  padding-left: 0.9375em;
-  padding-right: 0.9375em;
-  width: 33.33333%;
+  padding-left: 0;
+  padding-right: 0;
+  width: 25%;
   float: left;
+  text-align: right;
 }
 
 @media only screen and (min-width: 48em) {

@@ -7,13 +7,6 @@
     @include grid-row(nest);
   }
 }
-// // Row 2
-// .row2 {
-//   .layout-landing &,
-//   .layout-flex-sidebar &,
-//   .layout-flex-nosidebar & {
-//   }
-// }
 
 //
 // Columns
@@ -23,12 +16,14 @@
 
 // Layout logic for cols 1-4
 @for $i from 1 through 3 {
-  .columns-#{$i} .col {
-    // Full width for mobile
-    @include grid-column($full-width);
-    @include respond-to(tablet) {
-      // Full width divided by column number for desktop
-      @include grid-column($full-width / $i);
+  .columns-#{$i} {
+    .col {
+      // Full width for mobile
+      @include grid-column($full-width);
+      @include respond-to(tablet) {
+        // Full width divided by column number for desktop
+        @include grid-column($full-width / $i);
+      }
     }
   }
 }

@@ -1,3 +1,13 @@
 #block-menu-menu-audience-menu {
   @extend %block-title-hide;
+  .menu {
+    > li {
+      margin-left: 1em;
+      &.last {
+        a {
+          padding-right: 0;
+        }
+      }
+    }
+  }
 }

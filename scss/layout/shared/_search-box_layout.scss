@@ -1,10 +1,10 @@
 .block-search {
-  // @extend %block-layout-fix;
   .form-type-textfield {
-    @include grid-column(8);
+    @include grid-column(9);
   }
   .form-actions {
-    @include grid-column(4);
+    @include grid-column(3, false, false, false, false, false, true);
+    text-align: right;
   }
 }
 

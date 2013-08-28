@@ -1,12 +1,22 @@
 .primary-menu {
+  .dropdown {
+    @include transition(visibility .1s);
+  }
   .last {
     a, a:not(.button) {
+    @include transition(background .25s);
       background: $gray;
     }
     &:hover {
       a, a:not(.button) {
         background: $gray-light;
       }
+    }
+  }
+  .dropdown {
+    @include respond-to(tablet) {
+      background-color: $topbar-bg;
+      padding-bottom: .5em;
     }
   }
 }

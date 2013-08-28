@@ -15,7 +15,7 @@
     }
   }
   // For desktop on up
-  @if $target == desktop {
+  @else if $target == desktop {
     @media #{$medium} {
       @content;
     }
@@ -26,7 +26,7 @@
     }
   }
   // For widescreen
-  @if $target == widescreen {
+  @else if $target == widescreen {
     @media #{$large} {
       @content;
     }
@@ -37,25 +37,25 @@
     }
   }
   // For IE9 and down
-  @if $target == ie9 {
+  @else if $target == ie9 {
     .lt-ie10 &{
       @content;
     }
   }
   // For IE8 and down
-  @if $target == ie8 {
+  @else if $target == ie8 {
     .lt-ie9 &{
       @content;
     }
   }
   // For IE7 and down
-  @if $target == ie7 {
+  @else if $target == ie7 {
     .lt-ie8 &{
       @content;
     }
   }
   // For print
-  @if $target == print {
+  @else if $target == print {
     // Allow us to generate a separate print stylesheet
     $print-styles: false !default;
     @if $print-styles {
@@ -66,6 +66,16 @@
       @content;
     }
   }
+  // For misc other breakpoints defined in _variables.scss
+  // @if $target {
+  //   @media $#{$target}-break {
+  //     @content;
+  //   }
+  //   // For IE versions less-than-9, so they can get the media query styles
+  //   .lt-ie9 &{
+  //     @content;
+  //   }
+  // }
 }
 
 // Making elements align in a grid, regardless of height
