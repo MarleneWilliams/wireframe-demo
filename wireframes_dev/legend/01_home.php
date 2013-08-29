@@ -13,10 +13,10 @@ elms: [
     notes:'<span class="name">The main, topical navigation menu for the site. All pages should have a spot in here.</span>'
   },
   {sel:'.prospective-students', idx:5.1,
-    notes:'<span class="name">Calls to action targeted at prospective students.</span>'
+    notes:'<span class="name">Calls to action targeted at visitors and highlighting featured pages..</span>'
   },
   {sel:'.current-students', idx:5.2,
-    notes:'<span class="name">Calls to action targeted at current students.</span>'
+    notes:'<span class="name">Calls to action targeted at visitors and highlighting featured pages.</span>'
   },
   {sel:'.row2 .cta-list', idx:6,
     notes:'<span class="name">Calls to action - Images with optional text directing visitors to additional highlighted areas of the site.</span>'

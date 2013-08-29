@@ -14,12 +14,3 @@
 @import "components/**/*";
 
 @import "layout/**/*";
-
-.block {
-  @include respond-to($tablet) {
-    display: block;
-  }
-  @include respond-to($print) {
-    // display: none;
-  }
-}

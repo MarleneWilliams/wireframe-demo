@@ -7191,7 +7191,7 @@ input[type="submit"] {
   width: 100%;
   float: left;
 }
-@media tablet {
+@media only screen and (min-width: 48em) {
   /* line 71, ../scss/base/html/_forms.scss */
   .views-exposed-widget {
     position: relative;
@@ -7319,7 +7319,7 @@ input[type="submit"] {
 }
 
 /* END: .node-person */
-@media tablet {
+@media only screen and (min-width: 48em) {
   /* line 1, ../scss/components/page-calendar/_block-calendar-list.scss */
   .block-calendar-list {
     display: none;
@@ -7340,7 +7340,7 @@ input[type="submit"] {
 .block-calendar {
   display: none;
 }
-@media tablet {
+@media only screen and (min-width: 48em) {
   /* line 1, ../scss/components/page-calendar/_block-calendar.scss */
   .block-calendar {
     display: block;
@@ -7395,7 +7395,7 @@ input[type="submit"] {
 .view-directory .views-field-field-person-headshot img:hover {
   background-color: #8c8c8c;
 }
-@media tablet {
+@media only screen and (min-width: 48em) {
   /* line 14, ../scss/components/page-directory/_view-directory.scss */
   .view-directory .views-field-field-person-headshot img {
     margin-top: .74em;
@@ -7968,7 +7968,7 @@ html[xmlns] .slides {
 #block-menu-menu-footer-menu ul li {
   margin-bottom: 0;
 }
-@media tablet {
+@media only screen and (min-width: 48em) {
   /* line 18, ../scss/components/shared/_footer-menu.scss */
   #block-menu-menu-footer-menu ul {
     border-bottom: 0 none;
@@ -8015,7 +8015,7 @@ html[xmlns] .slides {
   font-size: 80%;
   text-align: center;
 }
-@media tablet {
+@media only screen and (min-width: 48em) {
   /* line 1, ../scss/components/shared/_footer-text.scss */
   #block-block-1 {
     text-align: right;
@@ -8099,7 +8099,7 @@ img.placeholder:hover {
 .primary-menu .last:hover a, .primary-menu .last:hover a:not(.button) {
   background: #bfbfbf;
 }
-@media tablet {
+@media only screen and (min-width: 48em) {
   /* line 16, ../scss/components/shared/_primary-menu.scss */
   .primary-menu .dropdown {
     background-color: #111111;
@@ -9681,21 +9681,4 @@ body .legend-overlay-notes dd {
   padding-right: 0.9375em;
   width: 33.33333%;
   float: left;
-}
-
-@media only screen and (min-width: 48em) {
-  /* line 18, ../scss/style.scss */
-  .block {
-    display: block;
-  }
-}
-@media print {
-  /* line 18, ../scss/style.scss */
-  .block {
-    display: block;
-  }
-}
-/* line 48, ../scss/global/_mixins.scss */
-.lt-ie9 .block {
-  display: block;
 }

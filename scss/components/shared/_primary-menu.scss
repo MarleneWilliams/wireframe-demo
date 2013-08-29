@@ -14,7 +14,7 @@
     }
   }
   .dropdown {
-    @include respond-to(tablet) {
+    @include respond-to($tablet) {
       background-color: $topbar-bg;
       padding-bottom: .5em;
     }
