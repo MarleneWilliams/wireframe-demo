@@ -64,11 +64,19 @@ $portrait: "only screen and (orientation: portrait)";
 $topbar-breakpoint: $small-screen;
 
 // Respond-to variables
-$print-media: "print";
+$print: "print";
+$no-print: "false";
 
-$tablet: #{$small};
+// Assign devices to sizes
+$tablet: $small;
 $desktop: $medium;
 $widescreen: $large;
+
+// Need to define IE variables for the respond-to mixin
+$ie10: ".ie10";
+$ie9: ".lt-ie10";
+$ie8: ".lt-ie9";
+$ie7: ".lt-ie8";
 
 
 //
@@ -156,3 +164,6 @@ $body-font-color: #222;
 // $shiny-edge-size: 0 1px 0;
 // $shiny-edge-color: rgba(#fff, .5);
 // $shiny-edge-active-color: rgba(#000, .2);
+
+
+$include-print-styles: false;

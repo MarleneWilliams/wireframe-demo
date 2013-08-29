@@ -4,7 +4,7 @@
     @extend %inline-list-center;
       // @extend .inline-list;
   }
-  @include respond-to(tablet) {
+  @include respond-to($tablet) {
     @include grid-column(4);
     .menu {
       @include inline-list;

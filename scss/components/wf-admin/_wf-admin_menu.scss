@@ -5,6 +5,9 @@
   opacity: 0.4;
   position: fixed;
   z-index: 99;
+  @include respond-to($print) {
+    display: none;
+  }
   &:hover {
     @include single-box-shadow($gray-dark, 0, 0, 1em, 0, false);
     opacity: 1;

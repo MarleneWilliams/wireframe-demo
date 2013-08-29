@@ -3,76 +3,66 @@
 //
 
 // Respond-to
-@mixin respond-to($target) {
-  // For tablet on up
-  @if $target == tablet {
-    @media #{$small} {
-      @content;
-    }
-    // For IE versions less-than-9, so they can get the media query styles
-    .lt-ie9 &{
-      @content;
-    }
-  }
-  // For desktop on up
-  @else if $target == desktop {
-    @media #{$medium} {
-      @content;
-    }
-    // For IE versions less-than-9, so they can get the media query styles
-    // Giving it more specificity than tablets
-    html.lt-ie9 &{
-      @content;
-    }
-  }
-  // For widescreen
-  @else if $target == widescreen {
-    @media #{$large} {
-      @content;
-    }
-    // For IE versions less-than-9, so they can get the media query styles
-    // Giving it more specificity than tablets
-    html.lt-ie9 body &{
-      @content;
-    }
-  }
-  // For IE9 and down
-  @else if $target == ie9 {
-    .lt-ie10 &{
-      @content;
-    }
-  }
-  // For IE8 and down
-  @else if $target == ie8 {
-    .lt-ie9 &{
-      @content;
-    }
-  }
-  // For IE7 and down
-  @else if $target == ie7 {
-    .lt-ie8 &{
+@mixin respond-to($target, $target-print: true) {
+  // Targeting IE
+  @if $target == $ie7 or $target == $ie8 or $target == $ie9 or $target == $ie10 {
+    #{$target} & {
       @content;
     }
   }
   // For print
-  @else if $target == print {
+  @else if $target == $print {
     // Allow us to generate a separate print stylesheet
     $print-styles: false !default;
     @if $print-styles {
       @content;
     }
     // Also put styles in a print media query
-    @media #{$print-media} {
+    // We need a separate instance of this to prevent print styles from getting applied to IE
+    @media #{$target} {
+      // Make it more specific than default print styles
+      html & {
+        @content;
+      }
+    }
+  }
+  // Turn off applicaion of styles to print by adding a second argument
+  @else if $target-print != true {
+    @media #{$target} {
+      @content;
+    }
+    // For IE versions less-than-9, so they can get the media query styles
+    .lt-ie9 &{
       @content;
     }
   }
-  // For misc other breakpoints defined in _variables.scss
-  // @if $target {
-  //   @media $#{$target}-break {
+  // For breakpoints or targets defined in _variables.scss
+  @else if $target {
+    @media #{$target} {
+      @content;
+    }
+    @media #{$print} {
+      @content;
+    }
+    // For IE versions less-than-9, so they can get the media query styles
+    .lt-ie9 &{
+      @content;
+    }
+  }
+  // Uncomment the next two if you're having difficulty with IE specificity
+  // For desktop on up
+  // @if $target == $desktop {
+  //   // For IE versions less-than-9, so they can get the media query styles
+  //   // Giving it more specificity than tablets
+  //   html.lt-ie9 &{
   //     @content;
   //   }
+  // }
+  // // For widescreen
+  // @if $target == $widescreen {
   //   // For IE versions less-than-9, so they can get the media query styles
-  //   .lt-ie9 &{
+  //   // Giving it more specificity than tablets
+  //   html.lt-ie9 body &{
   //     @content;
   //   }
   // }
@@ -127,12 +117,18 @@
   &:hover {
     background-color: lighten($bgc, 5%);
   }
+  // a & {
+  //   // background-color: lighten($bgc, 5%);
+  //   &:hover {
+  //   // background-color: pink;
+  //   }
+  // }
   &:before {
 
   }
-  img {
-    display: none;
-  }
+  // img {
+  //   display: none;
+  // }
 }
 
 // Icon bullets

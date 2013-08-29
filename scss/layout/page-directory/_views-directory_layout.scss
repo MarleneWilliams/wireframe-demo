@@ -1,6 +1,6 @@
 .view-directory {
   .views-row {
-    @include respond-to(tablet) {
+    @include respond-to($tablet) {
       @include gridify(2, 2%);
     }
   }

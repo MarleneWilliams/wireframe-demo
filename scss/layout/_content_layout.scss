@@ -8,7 +8,7 @@
   .layout-default &,
   .layout-flex-sidebar & {
     @include grid-column($full-width);
-    @include respond-to(tablet) {
+    @include respond-to($tablet) {
       @include grid-column($content-width);
     }
   }

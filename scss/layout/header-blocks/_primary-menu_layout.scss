@@ -1,6 +1,6 @@
 .primary-menu {
   @include grid-column($full-width);
-  @include respond-to(tablet) {
+  @include respond-to($tablet) {
     .title-area {
       display: none;
     }

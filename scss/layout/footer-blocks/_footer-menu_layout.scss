@@ -1,6 +1,6 @@
 #block-menu-menu-footer-menu {
   @include grid-column($full-width);
-  @include respond-to(tablet) {
+  @include respond-to($tablet) {
     ul {
       @include block-grid(2);
       ul {
@@ -12,7 +12,7 @@
       }
     }
   }
-  @include respond-to(desktop) {
+  @include respond-to($desktop) {
     ul {
       @include block-grid(4);
       ul {
