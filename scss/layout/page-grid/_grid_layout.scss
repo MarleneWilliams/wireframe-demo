@@ -1,0 +1,64 @@
+.page-grid {
+  // Grid container
+  .grid {
+    @include clearfix;
+    margin: 0 0 2em 0;
+  }
+  // Grid items, apply the gridify mixin to these
+  .grid-item {
+    @include gridify(1);
+    img {
+      display: block;
+      float: left;
+      margin-right: 1em;
+    }
+
+    // Grid layout
+    @include respond-to(25em) {
+      @include gridify(2, 5%, 9em);
+      img {
+        display: block;
+        float: none;
+        margin-right: 0;
+      }
+    }
+    @include respond-to(35em) {
+      @include gridify(3);
+    }
+    @include respond-to(45em) {
+      @include gridify(4);
+    }
+    @include respond-to(55em) {
+      @include gridify(5);
+    }
+    @include respond-to(65em) {
+      @include gridify(6);
+    }
+  }
+  ol.grid {
+    .grid-item {
+      // Grid layout
+      @include respond-to(25em) {
+        @include gridify(2, 1%, 9em);
+        img {
+          display: block;
+          float: none;
+          margin-right: 0;
+        }
+      }
+      @include respond-to(35em) {
+        @include gridify(3, 1%);
+      }
+      @include respond-to(45em) {
+        @include gridify(4, 1%);
+      }
+      @include respond-to(55em) {
+        @include gridify(5, 1%);
+      }
+      @include respond-to(65em) {
+        @include gridify(6, 1%);
+      }
+
+    }
+  }
+}

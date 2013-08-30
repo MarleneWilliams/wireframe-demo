@@ -1,0 +1,52 @@
+.page-grid {
+  .grid-item {
+    margin-bottom: 1em;
+  }
+  div.grid {
+    .grid-item {
+      img {
+        @include placeholder(6em, 8em);
+        @include respond-to(25em) {
+          @include placeholder(6em, 100%);
+        }
+      }
+    }
+  }
+  ul, ol {
+    &.grid {
+      .grid-item {
+        img {
+          @include placeholder(5em, 6em, $gray-lighter);
+          margin-bottom: .5em;
+        }
+        // "Randomize" the image shapes
+        &:nth-child(3n+2) {
+          img {
+            @include placeholder(6em, 6em, $gray-lighter);
+          }
+        }
+        &:nth-child(3n+4) {
+          img {
+            @include placeholder(7em, 5em, $gray-lighter);
+          }
+        }
+        &:nth-child(4n+7) {
+          img {
+            @include placeholder(7em, 6em, $gray-lighter);
+          }
+        }
+        &:nth-child(5n+2) {
+          img {
+            @include placeholder(4em, 7em, $gray-lighter);
+          }
+        }
+      }
+    }
+  }
+  ol.grid {
+    .grid-item {
+      border: 1px solid $gray-lighter;
+      padding: .5em;
+    }
+  }
+}

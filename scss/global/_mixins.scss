@@ -10,6 +10,19 @@
       @content;
     }
   }
+  // If it's a number, convert to ems and insert in a screen media query
+  @else if type-of($target) == "number" {
+    @media only screen and (min-width: #{$target}) {
+      @content
+    }
+    @media #{$print} {
+      @content;
+    }
+    // For IE versions less-than-9, so they can get the media query styles
+    .lt-ie9 & {
+      @content;
+    }
+  }
   // For print
   @else if $target == $print {
     // Allow us to generate a separate print stylesheet
@@ -45,7 +58,7 @@
       @content;
     }
     // For IE versions less-than-9, so they can get the media query styles
-    .lt-ie9 &{
+    .lt-ie9 & {
       @content;
     }
   }

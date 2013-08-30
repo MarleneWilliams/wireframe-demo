@@ -1,7 +1,8 @@
 #content {
   // No sidebars
   .layout-landing &,
-  .layout-flex-nosidebar & {
+  .layout-flex-nosidebar &,
+  .layout-nosidebar & {
     @include grid-column($full-width);
   }
   // One sidebar, on the left
