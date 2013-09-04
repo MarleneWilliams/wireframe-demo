@@ -1,6 +1,9 @@
 #header {
   @include grid-row;
   position: relative;
+  @include respond-to($ie7) {
+    min-width: $row-width;
+  }
   .inner {
     @include respond-to($tablet) {
       padding-top: 3em;

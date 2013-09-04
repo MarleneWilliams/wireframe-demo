@@ -1,3 +1,6 @@
 #footer {
   @include grid-row;
+  @include respond-to($ie7) {
+    min-width: $row-width;
+  }
 }

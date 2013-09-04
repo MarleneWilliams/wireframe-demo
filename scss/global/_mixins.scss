@@ -2,94 +2,112 @@
 // Media queries
 //
 
+//
+// Variables assumed by the mixin
+//
+
+$print: "print";
+
+$ie10: ".ie10";
+$ie9: ".lt-ie10";
+$ie8: ".lt-ie9";
+$ie7: ".lt-ie8";
+
+//
 // Respond-to
-@mixin respond-to($target, $target-print: true) {
-  // Targeting IE
-  @if $target == $ie7 or $target == $ie8 or $target == $ie9 or $target == $ie10 {
+//
+// Using the first argument, you can target:
+// - $ie7, $ie8, $ie9, $ie10 (pre-defined variables)
+// - $print
+// - Any media query defined in _variables.scss
+// - Any number in ems, for arbitrary breakpoints
+// - Any arbitrary media query, contained in ""
+//
+// Second argument automatically sets your styles to apply to print.
+// If you don't want your style applying to print, set the second variable
+// to anything but "true".
+//
+// Third argument defaults to giving IE8 media query styles. Set to "false"
+// if you don't want your styles applying to IE8.
+@mixin respond-to($target, $target-print: true, $target-ie8: true) {
+  // Target IE versions
+  // Assumes you have conditional wrapper classes in place and
+  // variables in place mapping to those wrappers.
+  @if $target == $ie7
+    or $target == $ie8
+    or $target == $ie9
+    or $target == $ie10 {
+    // Turning off other two variables to strictly target the IE version
+    $target-print: false;
+    $target-ie8: false;
+    // Putting the styles in the appropriate IE wrapper class
     #{$target} & {
       @content;
     }
   }
-  // If it's a number, convert to ems and insert in a screen media query
-  @else if type-of($target) == "number" {
-    @media only screen and (min-width: #{$target}) {
-      @content
+  // Allowing use of breakpoints or targets defined in _variables.scss
+  @else if $target {
+    // Allowing for arbitrary breakpoints
+    @if type-of($target) == "number" {
+      @media only screen and (min-width: #{$target}) {
+        @content;
+      }
     }
+    // If it's $print, just targeting print
+    @else if $target == $print {
+      $target-print: false;
+      $target-ie8: false;
+    }
+    // Putting our styles in our custom media query
+    @else {
+      @media #{$target} {
+        @content;
+      }
+    }
+  }
+  // Putting the styles into print media queries
+  @if $target-print == true {
     @media #{$print} {
       @content;
     }
-    // For IE versions less-than-9, so they can get the media query styles
-    .lt-ie9 & {
-      @content;
-    }
   }
-  // For print
-  @else if $target == $print {
-    // Allow us to generate a separate print stylesheet
+  // Allowing us to generate a separate print stylesheet
+  @if $target-print == true
+    or $target == $print {
+    // This variable is off by default. Declare "true" at
+    // beginning of print.scss and then include styles.scss
+    // if you want to generate a separate print stylesheet.
     $print-styles: false !default;
-    @if $print-styles {
-      @content;
-    }
-    // Also put styles in a print media query
-    // We need a separate instance of this to prevent print styles from getting applied to IE
-    @media #{$target} {
-      // Make it more specific than default print styles
+    // If enabled, generating the styles w/o media queries
+    // and with an extra level of specificity.
+    @if $print-styles != false {
       html & {
         @content;
       }
     }
   }
-  // Turn off applicaion of styles to print by adding a second argument
-  @else if $target-print != true {
-    @media #{$target} {
-      @content;
-    }
-    // For IE versions less-than-9, so they can get the media query styles
-    .lt-ie9 &{
-      @content;
-    }
-  }
-  // For breakpoints or targets defined in _variables.scss
-  @else if $target {
-    @media #{$target} {
-      @content;
-    }
-    @media #{$print} {
-      @content;
-    }
-    // For IE versions less-than-9, so they can get the media query styles
+  // Giving media query styles to IE8, if set as true
+  @if $target-ie8 == true {
     .lt-ie9 & {
       @content;
     }
   }
-  // Uncomment the next two if you're having difficulty with IE specificity
-  // For desktop on up
-  // @if $target == $desktop {
-  //   // For IE versions less-than-9, so they can get the media query styles
-  //   // Giving it more specificity than tablets
-  //   html.lt-ie9 &{
-  //     @content;
-  //   }
-  // }
-  // // For widescreen
-  // @if $target == $widescreen {
-  //   // For IE versions less-than-9, so they can get the media query styles
-  //   // Giving it more specificity than tablets
-  //   html.lt-ie9 body &{
-  //     @content;
-  //   }
-  // }
 }
 
-// Making elements align in a grid, regardless of height
+// Gridify
+//
+// Make elements align in a grid, regardless of height
 // Apply to elements you want as grid items
 // $cols = how many columns you want
 // $margin-right = margin-right, should be in percent
-// $ie8-height = an explicit height for all the elements
+// $ie8-height = an explicit height for all the elements, only applied to IE
 @mixin gridify($cols, $margin-right: 5%, $ie8-height: auto) {
+  // Math for widths, margins, and clears
   $width: (100% / $cols) - $margin-right + ($margin-right / $cols);
+  $ie-width: (100% / $cols) - $margin-right;
   $clearnum: $cols + 1;
 
+  // Default styles for each grid item
   clear: none;
   display: block;
   float: left;
@@ -112,9 +130,10 @@
     margin-right: 0;
   }
 
-  // Fix for IE8
-  .ie-8 & {
+  // Fix for IE8 since it can't handle :nth-child()
+  .lt-ie9 & {
     height: $ie8-height;
+    width: $ie-width;
   }
 }
 
@@ -125,23 +144,10 @@
   height: $height;
   margin-bottom: 1em;
   max-width: 100%;
-  // position: relative;
   width: $width;
   &:hover {
     background-color: lighten($bgc, 5%);
   }
-  // a & {
-  //   // background-color: lighten($bgc, 5%);
-  //   &:hover {
-  //   // background-color: pink;
-  //   }
-  // }
-  &:before {
-
-  }
-  // img {
-  //   display: none;
-  // }
 }
 
 // Icon bullets

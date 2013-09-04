@@ -6,7 +6,7 @@
   }
   // Grid items, apply the gridify mixin to these
   .grid-item {
-    @include gridify(1);
+    @include gridify(1, 5%, 10em);
     img {
       display: block;
       float: left;
@@ -15,7 +15,7 @@
 
     // Grid layout
     @include respond-to(25em) {
-      @include gridify(2, 5%, 9em);
+      @include gridify(2);
       img {
         display: block;
         float: none;
